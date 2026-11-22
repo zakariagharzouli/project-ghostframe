@@ -9,7 +9,7 @@ import zlib
 from dataclasses import dataclass
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageChops
 
 SIGNATURE = b"\x89PNG\r\n\x1a\n"
 ARCHIVE = b"gfRs"
@@ -124,7 +124,20 @@ def static_png(width, height, rgba):
     return serialize([header(width, height), (b"IDAT", compressed_pixels(width, height, rgba)), (b"IEND", b"")])
 
 
-def apng(motion, poster=None, archive=False):
+def frame_region(width, height, frame, previous, full_pixels):
+    current = Image.frombytes("RGBA", (width, height), frame)
+    prior = Image.frombytes("RGBA", (width, height), previous)
+    box = ImageChops.difference(current, prior).getbbox(alpha_only=False)
+    left, top, right, bottom = box or (0, 0, 1, 1)
+    cropped_width, cropped_height = right - left, bottom - top
+    if (cropped_width, cropped_height) != (width, height):
+        compressed = compressed_pixels(cropped_width, cropped_height, current.crop((left, top, right, bottom)).tobytes())
+        if len(compressed) < len(full_pixels):
+            return cropped_width, cropped_height, left, top, compressed
+    return width, height, 0, 0, full_pixels
+
+
+def apng(motion, poster=None, archive=False, sparse=False):
     """Use a separate default image when poster is supplied."""
     width, height = motion.width, motion.height
     stream = [header(width, height), (b"acTL", struct.pack(">II", len(motion.frames), motion.plays))]
@@ -132,16 +145,21 @@ def apng(motion, poster=None, archive=False):
         stream.append((b"IDAT", compressed_pixels(width, height, poster)))
 
     sequence = 0
+    previous = None
     for index, (frame, delay) in enumerate(zip(motion.frames, motion.delays, strict=True)):
-        control = struct.pack(">IIIIIHHBB", sequence, width, height, 0, 0, delay, 1000, 0, 0)
+        region_width, region_height, x, y = width, height, 0, 0
+        pixels = compressed_pixels(width, height, frame)
+        if sparse and previous is not None:
+            region_width, region_height, x, y, pixels = frame_region(width, height, frame, previous, pixels)
+        control = struct.pack(">IIIIIHHBB", sequence, region_width, region_height, x, y, delay, 1000, 0, 0)
         stream.append((b"fcTL", control))
         sequence += 1
-        pixels = compressed_pixels(width, height, frame)
         if index == 0 and poster is None:
             stream.append((b"IDAT", pixels))
         else:
             stream.append((b"fdAT", struct.pack(">I", sequence) + pixels))
             sequence += 1
+        previous = frame
     if archive:
         default = motion.frames[0] if poster is None else poster
         stream.append((ARCHIVE, archive_payload(motion, default)))
@@ -283,6 +301,7 @@ def main():
     encode.add_argument("--delay", type=int, default=250)
     encode.add_argument("--plays", type=int, default=0)
     encode.add_argument("--mode", choices=["apng", "dual", "atlas"], default="dual")
+    encode.add_argument("--sparse", action="store_true", help="Rectangles de différences APNG")
     show = commands.add_parser("inspect")
     show.add_argument("input", type=Path)
     restore = commands.add_parser("recover")
@@ -304,10 +323,12 @@ def main():
         else:
             motion = encode_files(args.frames, args.delay, args.plays)
             if args.mode == "atlas":
+                if args.sparse:
+                    raise ValueError("--sparse exige un mode APNG ou dual")
                 blob, manifest = atlas(motion)
                 args.output.with_suffix(".json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
             else:
-                blob = apng(motion, archive=args.mode == "dual")
+                blob = apng(motion, archive=args.mode == "dual", sparse=args.sparse)
             args.output.write_bytes(blob)
     except (ValueError, KeyError, TypeError, OSError, SyntaxError, EOFError, zlib.error, struct.error) as error:
         parser.exit(2, f"{error}\n")
