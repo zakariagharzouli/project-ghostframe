@@ -1,0 +1,2218 @@
+{
+  "measured_at": "2026-11-22T20:47:42+01:00",
+  "python": "3.12.10",
+  "pillow": "12.3.0",
+  "inputs": {
+    "static": {
+      "sha256": "43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8",
+      "bytes": 244,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    },
+    "apng-a": {
+      "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+      "bytes": 1025,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+      "chunks": [
+        "IHDR",
+        "acTL",
+        "fcTL",
+        "IDAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": {
+        "size": [
+          96,
+          64
+        ],
+        "frames": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "delays_ms": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "plays": 0
+      }
+    },
+    "apng-b": {
+      "sha256": "f84e173628df6f38f4ab1e851f00187257399ec58e7c9c1ef8ee580f2141a1f5",
+      "bytes": 1025,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+      "chunks": [
+        "IHDR",
+        "acTL",
+        "fcTL",
+        "IDAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": {
+        "size": [
+          96,
+          64
+        ],
+        "frames": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff"
+        ],
+        "delays_ms": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "plays": 0
+      }
+    },
+    "separate-poster": {
+      "sha256": "696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866",
+      "bytes": 1742,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613",
+      "chunks": [
+        "IHDR",
+        "acTL",
+        "IDAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": {
+        "size": [
+          96,
+          64
+        ],
+        "frames": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "delays_ms": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "plays": 0
+      }
+    },
+    "ghostframe": {
+      "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+      "bytes": 1570,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+      "chunks": [
+        "IHDR",
+        "acTL",
+        "fcTL",
+        "IDAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "fcTL",
+        "fdAT",
+        "gfRs",
+        "IEND"
+      ],
+      "archive_bytes": 533,
+      "motion": {
+        "size": [
+          96,
+          64
+        ],
+        "frames": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "delays_ms": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "plays": 0
+      }
+    },
+    "atlas": {
+      "sha256": "29e5f3b9bcc39f2756397cc94cda1195a0d0f0348db8be413379b856456a4076",
+      "bytes": 655,
+      "size": [
+        96,
+        256
+      ],
+      "default_sha256": "f4bf2406fd9795e1e0278d77b7663b17cbb8546e1ef9e4aae26e0cf8754d269c",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    },
+    "frame-0": {
+      "sha256": "43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8",
+      "bytes": 244,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    },
+    "frame-1": {
+      "sha256": "b1208cdcc7aa4f318aeab2ffaf559bcff0dbfc1bef4900c2d60f843fb6389b89",
+      "bytes": 243,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    },
+    "frame-2": {
+      "sha256": "5981676af4d69c359d8f3c3e2707ca5df925f47b7f08d201e3ef41517dab5773",
+      "bytes": 244,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    },
+    "frame-3": {
+      "sha256": "2c457a3c08a17f50671d23645f256b2cc136a77094438248004b6acc28686ddf",
+      "bytes": 245,
+      "size": [
+        96,
+        64
+      ],
+      "default_sha256": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "archive_bytes": 0,
+      "motion": null
+    }
+  },
+  "transports": {
+    "static-copy": {
+      "profile": "copy",
+      "source": "static",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8.png"
+      },
+      "before": {
+        "sha256": "43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8",
+        "bytes": 244,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "after": {
+        "sha256": "43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8",
+        "bytes": 244,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": null
+    },
+    "apng-copy": {
+      "profile": "copy",
+      "source": "apng-a",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png"
+      },
+      "before": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": true
+    },
+    "poster-copy": {
+      "profile": "copy",
+      "source": "separate-poster",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866.png"
+      },
+      "before": {
+        "sha256": "696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866",
+        "bytes": 1742,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866",
+        "bytes": 1742,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": true
+    },
+    "ghostframe-copy": {
+      "profile": "copy",
+      "source": "ghostframe",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc.png"
+      },
+      "before": {
+        "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+        "bytes": 1570,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+        "bytes": 1570,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": true
+    },
+    "apng-all-frames": {
+      "profile": "all-frames",
+      "source": "apng-a",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/5b85cb095a3e215c862bb6ff12e46e72451b5ff51420391f148d5a2d9db022ea.png"
+      },
+      "before": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "5b85cb095a3e215c862bb6ff12e46e72451b5ff51420391f148d5a2d9db022ea",
+        "bytes": 1010,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": true
+    },
+    "poster-all-frames": {
+      "profile": "all-frames",
+      "source": "separate-poster",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/19d7787abd5887fe3cc865309113cc0d7699a50d3b29be2c57cabf6d15e0c8fe.png"
+      },
+      "before": {
+        "sha256": "696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866",
+        "bytes": 1742,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "19d7787abd5887fe3cc865309113cc0d7699a50d3b29be2c57cabf6d15e0c8fe",
+        "bytes": 1974,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": true
+    },
+    "apng-raster-a": {
+      "profile": "raster",
+      "source": "apng-a",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798.png"
+      },
+      "before": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798",
+        "bytes": 326,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": false
+    },
+    "apng-raster-b": {
+      "profile": "raster",
+      "source": "apng-b",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798.png"
+      },
+      "before": {
+        "sha256": "f84e173628df6f38f4ab1e851f00187257399ec58e7c9c1ef8ee580f2141a1f5",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798",
+        "bytes": 326,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": false
+    },
+    "ghostframe-safe-copy": {
+      "profile": "safe-copy",
+      "source": "ghostframe",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/427229ee672d820d0e0e70e465550019a18d95beda6042b27c6ce635f5975f91.png"
+      },
+      "before": {
+        "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+        "bytes": 1570,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "427229ee672d820d0e0e70e465550019a18d95beda6042b27c6ce635f5975f91",
+        "bytes": 871,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": false
+    },
+    "ghostframe-raster": {
+      "profile": "raster",
+      "source": "ghostframe",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798.png"
+      },
+      "before": {
+        "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+        "bytes": 1570,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798",
+        "bytes": 326,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": false
+    },
+    "ghostframe-resize": {
+      "profile": "resize",
+      "source": "ghostframe",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/75e1010338bafe44fbb249e5e144c4c8ac5ffac2451dd08bc71ed07da4517558.png"
+      },
+      "before": {
+        "sha256": "6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc",
+        "bytes": 1570,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "gfRs",
+          "IEND"
+        ],
+        "archive_bytes": 533,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "75e1010338bafe44fbb249e5e144c4c8ac5ffac2451dd08bc71ed07da4517558",
+        "bytes": 720,
+        "size": [
+          48,
+          32
+        ],
+        "default_sha256": "995cb992c03566e30703f87b7937f9a42a11a9a301fef715e4f4913637139bf5",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": false,
+      "same_motion": false
+    },
+    "atlas-raster": {
+      "profile": "raster",
+      "source": "atlas",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/d13f8db37f32b0a74574244279c90f99bbd91218af56f0cf0159556e4f62aaf1.png"
+      },
+      "before": {
+        "sha256": "29e5f3b9bcc39f2756397cc94cda1195a0d0f0348db8be413379b856456a4076",
+        "bytes": 655,
+        "size": [
+          96,
+          256
+        ],
+        "default_sha256": "f4bf2406fd9795e1e0278d77b7663b17cbb8546e1ef9e4aae26e0cf8754d269c",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "after": {
+        "sha256": "d13f8db37f32b0a74574244279c90f99bbd91218af56f0cf0159556e4f62aaf1",
+        "bytes": 932,
+        "size": [
+          96,
+          256
+        ],
+        "default_sha256": "f4bf2406fd9795e1e0278d77b7663b17cbb8546e1ef9e4aae26e0cf8754d269c",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": true,
+      "same_motion": null
+    },
+    "atlas-resize": {
+      "profile": "resize",
+      "source": "atlas",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/438e406d9d4ebda55c7bc412b383e1fad1956f7bce8582035c43f16698626a51.png"
+      },
+      "before": {
+        "sha256": "29e5f3b9bcc39f2756397cc94cda1195a0d0f0348db8be413379b856456a4076",
+        "bytes": 655,
+        "size": [
+          96,
+          256
+        ],
+        "default_sha256": "f4bf2406fd9795e1e0278d77b7663b17cbb8546e1ef9e4aae26e0cf8754d269c",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "after": {
+        "sha256": "438e406d9d4ebda55c7bc412b383e1fad1956f7bce8582035c43f16698626a51",
+        "bytes": 2237,
+        "size": [
+          48,
+          128
+        ],
+        "default_sha256": "7884e9957cfa7c90e91ceb8c81e64a5a016a24cb21d0eb4f8f3cdc90eb2a9107",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": null
+      },
+      "same_file": false,
+      "same_default": false,
+      "same_motion": null
+    },
+    "ghostframe-recovered": {
+      "profile": "copy",
+      "source": "ghostframe-safe-copy",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png"
+      },
+      "before": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": true,
+      "recovery": "gfRs → APNG"
+    },
+    "atlas-recovered": {
+      "profile": "copy",
+      "source": "atlas-raster",
+      "http": {
+        "upload_status": 201,
+        "download_status": 200,
+        "content_type": "image/png",
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png"
+      },
+      "before": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "after": {
+        "sha256": "feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7",
+        "bytes": 1025,
+        "size": [
+          96,
+          64
+        ],
+        "default_sha256": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+        "chunks": [
+          "IHDR",
+          "acTL",
+          "fcTL",
+          "IDAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "fcTL",
+          "fdAT",
+          "IEND"
+        ],
+        "archive_bytes": 0,
+        "motion": {
+          "size": [
+            96,
+            64
+          ],
+          "frames": [
+            "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+            "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+            "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+            "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+          ],
+          "delays_ms": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "plays": 0
+        }
+      },
+      "same_file": true,
+      "same_default": true,
+      "same_motion": true,
+      "recovery": "atlas + manifeste → APNG"
+    }
+  },
+  "invariants": {
+    "distinct_apng_same_flat_bytes": true,
+    "flat_sha256": "cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798",
+    "rejected_recovery": {
+      "raster-sans-bloc": "Un seul bloc Ghostframe est requis",
+      "atlas-redimensionné": "Dimensions de l’atlas inattendues"
+    }
+  },
+  "browser": {
+    "browser": "HeadlessChrome/158.0.8127.36",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.36 Safari/537.36",
+    "node": "v24.18.0",
+    "browser_sandbox": false,
+    "viewport": [
+      1136,
+      600
+    ],
+    "samples": [
+      {
+        "file": "capture-01.png",
+        "elapsed_ms": 84,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-02.png",
+        "elapsed_ms": 324,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-03.png",
+        "elapsed_ms": 564,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG en arrière-plan CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG transcodé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas reconstruit en APNG": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff"
+        }
+      },
+      {
+        "file": "capture-04.png",
+        "elapsed_ms": 793,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-05.png",
+        "elapsed_ms": 1040,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-06.png",
+        "elapsed_ms": 1267,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG en arrière-plan CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG transcodé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas reconstruit en APNG": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        }
+      },
+      {
+        "file": "capture-07.png",
+        "elapsed_ms": 1503,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-08.png",
+        "elapsed_ms": 1732,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-09.png",
+        "elapsed_ms": 1955,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG en arrière-plan CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG transcodé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas reconstruit en APNG": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff"
+        }
+      },
+      {
+        "file": "capture-10.png",
+        "elapsed_ms": 2185,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-11.png",
+        "elapsed_ms": 2425,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-12.png",
+        "elapsed_ms": 2657,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG en arrière-plan CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG transcodé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas reconstruit en APNG": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        }
+      },
+      {
+        "file": "capture-13.png",
+        "elapsed_ms": 2886,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-14.png",
+        "elapsed_ms": 3117,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      },
+      {
+        "file": "capture-15.png",
+        "elapsed_ms": 3375,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG en arrière-plan CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG transcodé": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "Atlas reconstruit en APNG": "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff"
+        }
+      },
+      {
+        "file": "capture-16.png",
+        "elapsed_ms": 3619,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-17.png",
+        "elapsed_ms": 3853,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG en arrière-plan CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG transcodé": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "Atlas reconstruit en APNG": "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b"
+        }
+      },
+      {
+        "file": "capture-18.png",
+        "elapsed_ms": 4096,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG en arrière-plan CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG transcodé": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1",
+          "Atlas reconstruit en APNG": "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        }
+      },
+      {
+        "file": "capture-19.png",
+        "elapsed_ms": 4340,
+        "render_sha256": {
+          "Témoin statique": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG servi en image/png": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG en arrière-plan CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même APNG dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG avec poster séparé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Poster séparé dans canvas": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe d’origine": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG transcodé": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "APNG aplati": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Bloc Ghostframe seul": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Ghostframe restauré": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas statique, zone haute": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Même atlas animé en CSS": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "Atlas reconstruit en APNG": "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        }
+      }
+    ],
+    "probes": [
+      {
+        "name": "Témoin statique",
+        "case": "static-copy",
+        "surface": "img",
+        "expected_moving": false,
+        "url": "/images/43b8bd7308164f275d9e7d639e949b4e41a31f138f9adc751155848f56b7e5d8.png",
+        "rect": {
+          "name": "Témoin statique",
+          "x": 30,
+          "y": 104,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "pass": true
+      },
+      {
+        "name": "APNG servi en image/png",
+        "case": "apng-copy",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png",
+        "rect": {
+          "name": "APNG servi en image/png",
+          "x": 302,
+          "y": 104,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "APNG en arrière-plan CSS",
+        "case": "apng-copy",
+        "surface": "background",
+        "expected_moving": true,
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png",
+        "rect": {
+          "name": "APNG en arrière-plan CSS",
+          "x": 574,
+          "y": 104,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "Même APNG dans canvas",
+        "case": "apng-copy",
+        "surface": "canvas",
+        "expected_moving": false,
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png",
+        "rect": {
+          "name": "Même APNG dans canvas",
+          "x": 846,
+          "y": 104,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "matches_html_default_image": true,
+        "matches_first_animation_frame": true,
+        "pass": true
+      },
+      {
+        "name": "APNG avec poster séparé",
+        "case": "poster-copy",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866.png",
+        "rect": {
+          "name": "APNG avec poster séparé",
+          "x": 30,
+          "y": 230,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "Poster séparé dans canvas",
+        "case": "poster-copy",
+        "surface": "canvas",
+        "expected_moving": false,
+        "url": "/images/696cc312020a2dca7c27f2d475b6fd258550c6c80c0b226fd77fef354f7d2866.png",
+        "rect": {
+          "name": "Poster séparé dans canvas",
+          "x": 302,
+          "y": 230,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "2b1a3592d92528ab7b1bedd0f6ad07472ca82c82c1e1ca81618c62193480a613"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "matches_html_default_image": false,
+        "matches_first_animation_frame": true,
+        "pass": true
+      },
+      {
+        "name": "Ghostframe d’origine",
+        "case": "ghostframe-copy",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/6f3b2cd3f98f1d5fb2c576cb33d80cb0134a16634be647fe2a9560c8f445abbc.png",
+        "rect": {
+          "name": "Ghostframe d’origine",
+          "x": 574,
+          "y": 230,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "APNG transcodé",
+        "case": "apng-all-frames",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/5b85cb095a3e215c862bb6ff12e46e72451b5ff51420391f148d5a2d9db022ea.png",
+        "rect": {
+          "name": "APNG transcodé",
+          "x": 846,
+          "y": 230,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "APNG aplati",
+        "case": "apng-raster-a",
+        "surface": "img",
+        "expected_moving": false,
+        "url": "/images/cdc560d9f3ab06a0b2b81593952c9748ee802bf241d02f0353da4d0c6eb71798.png",
+        "rect": {
+          "name": "APNG aplati",
+          "x": 30,
+          "y": 356,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "pass": true
+      },
+      {
+        "name": "Bloc Ghostframe seul",
+        "case": "ghostframe-safe-copy",
+        "surface": "img",
+        "expected_moving": false,
+        "url": "/images/427229ee672d820d0e0e70e465550019a18d95beda6042b27c6ce635f5975f91.png",
+        "rect": {
+          "name": "Bloc Ghostframe seul",
+          "x": 302,
+          "y": 356,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "pass": true
+      },
+      {
+        "name": "Ghostframe restauré",
+        "case": "ghostframe-recovered",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png",
+        "rect": {
+          "name": "Ghostframe restauré",
+          "x": 574,
+          "y": 356,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "Atlas statique, zone haute",
+        "case": "atlas-raster",
+        "surface": "img",
+        "expected_moving": false,
+        "url": "/images/d13f8db37f32b0a74574244279c90f99bbd91218af56f0cf0159556e4f62aaf1.png",
+        "rect": {
+          "name": "Atlas statique, zone haute",
+          "x": 846,
+          "y": 356,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 19
+        },
+        "distinct": 1,
+        "pass": true
+      },
+      {
+        "name": "Même atlas animé en CSS",
+        "case": "atlas-raster",
+        "surface": "atlas",
+        "expected_moving": true,
+        "url": "/images/d13f8db37f32b0a74574244279c90f99bbd91218af56f0cf0159556e4f62aaf1.png",
+        "rect": {
+          "name": "Même atlas animé en CSS",
+          "x": 30,
+          "y": 482,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      },
+      {
+        "name": "Atlas reconstruit en APNG",
+        "case": "atlas-recovered",
+        "surface": "img",
+        "expected_moving": true,
+        "url": "/images/feed1d04c742edac6796c6119589d1f0a7fc02309c6c3e9a3d1295117ddf29d7.png",
+        "rect": {
+          "name": "Atlas reconstruit en APNG",
+          "x": 302,
+          "y": 482,
+          "width": 96,
+          "height": 64
+        },
+        "expected_sha256": [
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+        ],
+        "observed_sha256_counts": {
+          "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a": 7,
+          "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff": 3,
+          "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b": 6,
+          "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1": 3
+        },
+        "distinct": 4,
+        "pass": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "size": [
+    96,
+    64
+  ],
+  "frames": [
+    "b1d30ac7694a6bf4160bc818deb323d513bb9ec3fd9917bd465aecadcfb97e7a",
+    "06616d21ede6a665ae216d01d8721f1033e57b057dbecf0961982f14ade0e3ff",
+    "11dc4b019efc47b749b33d03e504f0b2114a1d7145d823f9d09b9a7a101bee1b",
+    "1a5a858a2b4e74463270bc35a9734e9b3aa2403b7f73ce8da46aa9efcf25ebb1"
+  ],
+  "delays_ms": [
+    350,
+    350,
+    350,
+    350
+  ],
+  "plays": 0,
+  "atlas_rgba_sha256": "f4bf2406fd9795e1e0278d77b7663b17cbb8546e1ef9e4aae26e0cf8754d269c"
+}

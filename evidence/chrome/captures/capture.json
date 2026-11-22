@@ -1,0 +1,188 @@
+{
+  "browser": "Chrome/158.0.8127.36",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+  "node": "v24.18.0",
+  "browser_sandbox": false,
+  "viewport": [
+    1136,
+    600
+  ],
+  "positions": [
+    {
+      "name": "Témoin statique",
+      "x": 30,
+      "y": 104,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "APNG servi en image/png",
+      "x": 302,
+      "y": 104,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "APNG en arrière-plan CSS",
+      "x": 574,
+      "y": 104,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Même APNG dans canvas",
+      "x": 846,
+      "y": 104,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "APNG avec poster séparé",
+      "x": 30,
+      "y": 230,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Poster séparé dans canvas",
+      "x": 302,
+      "y": 230,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Ghostframe d’origine",
+      "x": 574,
+      "y": 230,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "APNG transcodé",
+      "x": 846,
+      "y": 230,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "APNG aplati",
+      "x": 30,
+      "y": 356,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Bloc Ghostframe seul",
+      "x": 302,
+      "y": 356,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Ghostframe restauré",
+      "x": 574,
+      "y": 356,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Atlas statique, zone haute",
+      "x": 846,
+      "y": 356,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Même atlas animé en CSS",
+      "x": 30,
+      "y": 482,
+      "width": 96,
+      "height": 64
+    },
+    {
+      "name": "Atlas reconstruit en APNG",
+      "x": 302,
+      "y": 482,
+      "width": 96,
+      "height": 64
+    }
+  ],
+  "samples": [
+    {
+      "file": "capture-01.png",
+      "elapsed_ms": 640
+    },
+    {
+      "file": "capture-02.png",
+      "elapsed_ms": 885
+    },
+    {
+      "file": "capture-03.png",
+      "elapsed_ms": 1142
+    },
+    {
+      "file": "capture-04.png",
+      "elapsed_ms": 1397
+    },
+    {
+      "file": "capture-05.png",
+      "elapsed_ms": 1652
+    },
+    {
+      "file": "capture-06.png",
+      "elapsed_ms": 1912
+    },
+    {
+      "file": "capture-07.png",
+      "elapsed_ms": 2162
+    },
+    {
+      "file": "capture-08.png",
+      "elapsed_ms": 2392
+    },
+    {
+      "file": "capture-09.png",
+      "elapsed_ms": 2641
+    },
+    {
+      "file": "capture-10.png",
+      "elapsed_ms": 2858
+    },
+    {
+      "file": "capture-11.png",
+      "elapsed_ms": 3126
+    },
+    {
+      "file": "capture-12.png",
+      "elapsed_ms": 3384
+    },
+    {
+      "file": "capture-13.png",
+      "elapsed_ms": 3656
+    },
+    {
+      "file": "capture-14.png",
+      "elapsed_ms": 3933
+    },
+    {
+      "file": "capture-15.png",
+      "elapsed_ms": 4197
+    },
+    {
+      "file": "capture-16.png",
+      "elapsed_ms": 4459
+    },
+    {
+      "file": "capture-17.png",
+      "elapsed_ms": 4715
+    },
+    {
+      "file": "capture-18.png",
+      "elapsed_ms": 4998
+    },
+    {
+      "file": "capture-19.png",
+      "elapsed_ms": 5266
+    }
+  ]
+}
