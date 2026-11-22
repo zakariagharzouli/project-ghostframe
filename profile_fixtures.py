@@ -3,6 +3,7 @@
 import argparse
 import csv
 import io
+import json
 import struct
 import zlib
 from pathlib import Path
@@ -16,6 +17,7 @@ from pngcheck import describe, must
 FORMATS = (320, 400, 512)
 REFERENCE = "IG02_apng_rgba_320"
 COLORS = ("#18dcb8", "#f6a540", "#ee72ae", "#8098ff")
+MANUAL_OBSERVATIONS = Path(__file__).parent / "evidence" / "phase3" / "essais-profils.json"
 
 
 def demo_motion(size):
@@ -138,7 +140,8 @@ def write_suite(directory, cases):
 
 
 def write_manual_matrices(directory, manifests, exact_originals=None):
-    header = ("fichier", "référence", "facteur", "octets", "dimensions", "trames", "provenance",
+    observations = json.loads(MANUAL_OBSERVATIONS.read_text(encoding="utf-8"))
+    header = ("fichier", "référence", "facteur", "octets", "dimensions", "trames", "sha256_source", "provenance",
               "import", "aperçu_après_import", "sha256_ressource_servie", "mime_ressource",
               "trames_ressource", "rendu_client", "version_client", "message_observé", "date")
     for platform, codes, manual in (
@@ -155,14 +158,25 @@ def write_manual_matrices(directory, manifests, exact_originals=None):
             for name, imported, visible, index in manual:
                 report = exact_originals[index] if exact_originals else None
                 metadata = [report["bytes"], "x".join(map(str, report["dimensions"])),
-                            report["animation_frames"]] if report else ["", "", ""]
+                            report["animation_frames"], report["sha256"]] if report else ["", "", "", ""]
                 writer.writerow([name, "", "", *metadata, "observation manuelle utilisateur", imported,
                                  "", "", "", "", visible, "", "", ""])
+            matched = {row["sha256"]: row for row in observations["files"] if platform in row}
             for report in manifests:
                 if report["file"].startswith(codes) or (platform == "linkedin" and report["file"].startswith(("IG01", "IG02"))):
+                    observed = matched.pop(report["sha256"], None)
+                    result = observed[platform] if observed else {}
                     writer.writerow([report["file"], report["reference"], report["factor"], report["bytes"],
-                                     "x".join(map(str, report["dimensions"])), report["animation_frames"],
-                                     "généré, non essayé sur la plateforme", "non testé", *[""] * 8])
+                                     "x".join(map(str, report["dimensions"])), report["animation_frames"], report["sha256"],
+                                     "observation manuelle utilisateur" if observed else "généré, non essayé sur la plateforme",
+                                     result.get("import", "non testé"), "", "", "", "", result.get("render"), "",
+                                     result.get("note"), observations["date"] if observed else ""])
+            for observed in matched.values():
+                result = observed[platform]
+                writer.writerow([observed["file"], "", observed["id"], observed["bytes"],
+                                 "x".join(map(str, observed["dimensions"])), observed["frames"], observed["sha256"],
+                                 "observation manuelle utilisateur", result["import"], "", "", "", "",
+                                 result.get("render"), "", result.get("note"), observations["date"]])
 
 
 def generate(directory, original=None, linkedin_b=None):

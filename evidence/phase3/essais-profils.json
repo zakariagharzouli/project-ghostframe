@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-22",
+  "provenance": "Observation manuelle communiquée par l’utilisateur. Les fichiers d’entrée sont identifiés par SHA-256.",
+  "files": [
+    {
+      "id": "IG01",
+      "file": "ghostframe-phase3-IG01-statique-320.png",
+      "sha256": "df1c497a89566eca7bc18aea6810ced74f11cd43a7fbfa5c11f000a446521f82",
+      "bytes": 13670,
+      "dimensions": [320, 320],
+      "frames": 0,
+      "instagram": {"import": "accepté", "render": null},
+      "linkedin": {"import": "accepté", "render": "fixe"}
+    },
+    {
+      "id": "IG02",
+      "file": "ghostframe-phase3-IG02-apng-320.png",
+      "sha256": "572bae483477ff94e2d66ac265a4a87cbf39949c918459e9289f0256322b8788",
+      "bytes": 321524,
+      "dimensions": [320, 320],
+      "frames": 24,
+      "instagram": {"import": "refusé", "render": null, "note": "Le fichier ne se charge pas dans le client."},
+      "linkedin": {"import": "accepté", "render": "fixe"}
+    },
+    {
+      "id": "N01",
+      "file": "ghostframe-phase3-N01-rgb-320.png",
+      "sha256": "9920994e53e3fffb6ce9f3a3bdbc873e7fd25d3b3d73a750ccaab8ace4903368",
+      "bytes": 273140,
+      "dimensions": [320, 320],
+      "frames": 24,
+      "instagram": {"import": "refusé", "render": null, "note": "Le fichier ne se charge pas dans le client."},
+      "linkedin": {"import": "accepté", "render": "fixe"}
+    }
+  ]
+}

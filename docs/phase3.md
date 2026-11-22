@@ -15,7 +15,19 @@ Toutes les trames de V1 et B sont opaques, avec un canal alpha à 255. Aucun des
 
 Le banc Windows a servi les deux originaux par HTTP comme `image/png`. Dans `<img>`, 16 états distincts des régions de mesure correspondent à des trames décodées de chaque fichier sur 19 captures. Le décodage confirme les 24 trames. La cadence des captures est inférieure à celle de la séquence. Ce relevé local établit que les deux entrées peuvent animer un navigateur avant un traitement social.
 
-Le candidat N01 dérivé de B utilise les rectangles APNG et le RGB opaque. Il pèse **273 140 octets**, contre 321 524 pour B, et conserve exactement les 24 trames RGBA normalisées, les délais et la boucle. Ses 16 états échantillonnés correspondent aussi aux régions attendues dans Chromium. Son import et sa lecture sur les deux plateformes restent à mesurer.
+Le candidat N01 dérivé de B utilise les rectangles APNG et le RGB opaque. Il pèse **273 140 octets**, contre 321 524 pour B, et conserve exactement les 24 trames RGBA normalisées, les délais et la boucle. Ses 16 états échantillonnés correspondent aussi aux régions attendues dans Chromium.
+
+## Nouveaux essais manuels du 22 novembre 2026
+
+| Fichier exact du kit | Instagram, photo de profil | LinkedIn, photo de profil |
+|---|---|---|
+| IG01, PNG fixe issu du flux `IDAT` de B | Accepté | Accepté, rendu fixe |
+| IG02, identique à B, APNG RGBA sans `gfRs` | Le client ne le charge pas | Accepté, rendu fixe |
+| N01, APNG RGB à rectangles sans `gfRs` | Le client ne le charge pas | Accepté, rendu fixe |
+
+Sur Instagram, les refus d’IG02 et de N01 se produisent sans `gfRs`. Un canal alpha n’est pas requis pour reproduire ce comportement. Les deux fichiers qui ne se chargent pas contiennent la même séquence de 24 trames, alors que le témoin fixe partage le même poster à 320 × 320 px. Le nombre de trames, la structure APNG et le poids des fichiers restent à départager. Le témoignage ne localise pas le refus entre le client et le serveur.
+
+Sur LinkedIn, l’encodage RGB et les rectangles n’ont pas changé le résultat visible. La capture des octets livrés reste l’expérience qui permet de distinguer aplatissement et rendu fixe. Le journal date ces observations et les associe aux SHA-256 des fichiers effectivement remis à l’utilisateur, indépendamment des analogues synthétiques. [Observations manuelles et identifiants](../evidence/phase3/essais-profils.json)
 
 ## Deux manières de rendre B fixe
 
@@ -50,13 +62,11 @@ Le générateur emploie la même animation carrée et des variantes appariées. 
 
 Ajouter un bloc change naturellement le poids. Réencoder le même film avec un autre niveau zlib donne un témoin séparé pour le poids, sans garantie d’explorer tous les seuils possibles. Redimensionner conserve la séquence et les délais, mais modifie les échantillons et généralement le poids. Dans l’essai sur le poster distinct, l’IDAT est hors de la boucle tout en conservant exactement l’apparence de la première trame. LinkedIn documente JPG ou PNG et une taille d’au moins 400 × 400 px pour la photo de profil. Les acceptations à 320 px rapportées restent des observations sur les sessions testées. Utiliser une image et un compte d’essai autorisés et conformes aux règles de la surface. [Conditions de la photo de profil LinkedIn](https://www.linkedin.com/help/linkedin/answer/a549049?lang=en)
 
-### Ordre recommandé pour l’essai humain Instagram
+### Paire à poids égal pour le prochain essai Instagram
 
-1. Importer `IG01_statique_IDAT_320.png` du kit local, issu exactement du raster encodé de B. Consigner le signal observé dans le client, y compris si l’échec arrive avant ou après l’aperçu.
-2. Dans les mêmes conditions, importer `IG02_apng_rgba_320.png`, qui est B octet pour octet. Comparer à V1 (`IG05_apng_gfRs_320.png`) si le même import peut être retenté dans les conditions autorisées.
-3. Si l’APNG est rejeté, exercer les témoins rectangles et RGB séparément, puis le candidat combiné si utile. Un APNG accepté doit encore passer la vérification des octets servis et du rendu.
+IG12 est un PNG fixe et IG13 un APNG à deux trames avec un point visible qui clignote. Dans le kit local, tous deux font 13 921 octets et reprennent le même `IHDR` et le même flux `IDAT` qu’IG01. IG12 ajoute un bloc `tEXt` de taille calculée. IG13 ajoute uniquement les blocs nécessaires à la boucle APNG. Sur 19 captures du banc Chromium, IG12 montre un état et IG13 les deux états décodés. Les deux nouveaux fichiers restent à essayer sur Instagram.
 
-Un IG02 accepté et un IG05 refusé isoleraient une différence liée à l’ajout de `gfRs` sur cet essai. Le poids ajouté resterait à départager du type de bloc. IG01 accepté et IG02 refusé isoleraient un écart lié à la présence de la structure APNG et des octets correspondants. Répéter à client et dimensions stables. Aucun essai Instagram supplémentaire ne figure comme exécuté dans ce rapport.
+Comparer les deux imports dans le même client et relever jusqu’où chacun se charge. Si IG12 passe et IG13 échoue, un simple seuil de taille du fichier ne suffit plus à expliquer la différence pour cette paire. Si l’APNG à deux trames passe, il faudra distinguer le nombre de trames, le poids et le traitement des fichiers à 24 trames. La ressource servie et les pixels réellement visibles doivent encore être mesurés après tout import réussi.
 
 ## Collecter la variante réellement livrée
 
@@ -68,6 +78,7 @@ Le comparateur lit un reçu JSON local. Pour chaque variante, fournir `role`, `f
 python -m pip install -r requirements-phase2.txt
 python -m unittest discover -s tests -v
 python profile_fixtures.py
+python profile_weight_pair.py run/phase3-suite/IG01_statique_IDAT_320.png
 python pngcheck.py run/phase3-suite/IG02_apng_rgba_320.png
 python profile_lab.py --verify
 python profile_diagnosis.py run/phase3-profiles/source-IG02_apng_rgba_320.png run/phase3-profiles/recu-IG02_apng_rgba_320.json

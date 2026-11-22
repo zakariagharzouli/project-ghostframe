@@ -49,6 +49,7 @@ jobs:
           name: ghostframe-phase2
           path: run/phase2/
       - run: python profile_fixtures.py
+      - run: python profile_weight_pair.py run/phase3-suite/IG01_statique_IDAT_320.png
       - run: python profile_lab.py --verify
       - uses: actions/upload-artifact@v7
         if: always()
@@ -56,4 +57,5 @@ jobs:
           name: ghostframe-phase3
           path: |
             run/phase3-suite/
+            run/phase3-weight-pair/
             run/phase3-profiles/

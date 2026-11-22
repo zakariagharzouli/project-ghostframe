@@ -1,11 +1,14 @@
-﻿fichier;référence;facteur;octets;dimensions;trames;provenance;import;aperçu_après_import;sha256_ressource_servie;mime_ressource;trames_ressource;rendu_client;version_client;message_observé;date
-A_png_statique_320.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
-B_apng_standard_320.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
-C_png_statique_512.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
-IG01_statique_IDAT_320.png;IG02_apng_rgba_320.png;Trames retirées, IHDR et IDAT conservés;2487;320x320;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
-IG02_apng_rgba_320.png;;APNG témoin, poster inclus, RGBA opaque;10073;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
-LI01_statique_400.png;LI02_apng_400.png;Témoin fixe à 400 px;24193;400x400;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
-LI02_apng_400.png;IG02_apng_rgba_320.png;Même séquence à 400 px;98377;400x400;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
-LI03_statique_512.png;LI04_apng_512.png;Témoin fixe à 512 px;41390;512x512;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
-LI04_apng_512.png;IG02_apng_rgba_320.png;Même séquence à 512 px;166623;512x512;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
-N01_apng_rgb_rectangles_320.png;IG02_apng_rgba_320.png;Candidat combiné RGB + rectangles;5981;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+﻿fichier;référence;facteur;octets;dimensions;trames;sha256_source;provenance;import;aperçu_après_import;sha256_ressource_servie;mime_ressource;trames_ressource;rendu_client;version_client;message_observé;date
+A_png_statique_320.png;;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+B_apng_standard_320.png;;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+C_png_statique_512.png;;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+IG01_statique_IDAT_320.png;IG02_apng_rgba_320.png;Trames retirées, IHDR et IDAT conservés;2487;320x320;0;379b01d6a42527b6e77bf90de71d473e6db20f7aaa485ac6d14a2f0d7e4f6ee0;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG02_apng_rgba_320.png;;APNG témoin, poster inclus, RGBA opaque;10073;320x320;4;3ddd76839e231e3b6bdaf128827340b25f459f749bbd00b81f77e9fa1112d8a8;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI01_statique_400.png;LI02_apng_400.png;Témoin fixe à 400 px;24193;400x400;0;17a40b20e5d418de98b1ad5208fd601d90c69107e950c3f3fc5baaa7b8d1d355;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI02_apng_400.png;IG02_apng_rgba_320.png;Même séquence à 400 px;98377;400x400;4;4a458f5a6245299b1e95ad297946fc1740202230674b584fabb5be58bb2f43e7;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI03_statique_512.png;LI04_apng_512.png;Témoin fixe à 512 px;41390;512x512;0;eb77328e790608eacc03827cecd29f750f37fb2056358d81e0d9adf7df8536f8;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI04_apng_512.png;IG02_apng_rgba_320.png;Même séquence à 512 px;166623;512x512;4;a1a80a8438eb8013b4d8d973784781b8b2bda2606bafa5dae7c2689aba790868;généré, non essayé sur la plateforme;non testé;;;;;;;;
+N01_apng_rgb_rectangles_320.png;IG02_apng_rgba_320.png;Candidat combiné RGB + rectangles;5981;320x320;4;934064c13f04b756110bd13cadeecb2d67815f6a3b2b9bc2d1e78fa96891be50;généré, non essayé sur la plateforme;non testé;;;;;;;;
+ghostframe-phase3-IG01-statique-320.png;;IG01;13670;320x320;0;df1c497a89566eca7bc18aea6810ced74f11cd43a7fbfa5c11f000a446521f82;observation manuelle utilisateur;accepté;;;;;fixe;;;2026-11-22
+ghostframe-phase3-IG02-apng-320.png;;IG02;321524;320x320;24;572bae483477ff94e2d66ac265a4a87cbf39949c918459e9289f0256322b8788;observation manuelle utilisateur;accepté;;;;;fixe;;;2026-11-22
+ghostframe-phase3-N01-rgb-320.png;;N01;273140;320x320;24;9920994e53e3fffb6ce9f3a3bdbc873e7fd25d3b3d73a750ccaab8ace4903368;observation manuelle utilisateur;accepté;;;;;fixe;;;2026-11-22
