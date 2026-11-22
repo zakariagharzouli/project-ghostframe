@@ -1,0 +1,94 @@
+{
+  "measured_at": "2026-11-23T00:25:22+01:00",
+  "profile": "https://www.instagram.com/residual.labs/",
+  "selected_reference": "profile_pic_url correspondant à og:image",
+  "cdn_host": "scontent-cdg6-1.cdninstagram.com",
+  "requests": [
+    {
+      "case": "toutes-images",
+      "accept": "image/*",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "vary": null,
+      "diagnosis": "statique",
+      "format": "JPEG",
+      "dimensions": [
+        150,
+        150
+      ],
+      "bytes": 3413,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+      "animation_frames": 0,
+      "distinct_animation_frames": 0
+    },
+    {
+      "case": "préférences-mixtes",
+      "accept": "image/avif,image/webp,image/apng,image/png,image/*;q=0.8",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "vary": null,
+      "diagnosis": "statique",
+      "format": "JPEG",
+      "dimensions": [
+        150,
+        150
+      ],
+      "bytes": 3413,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+      "animation_frames": 0,
+      "distinct_animation_frames": 0
+    },
+    {
+      "case": "png-apng",
+      "accept": "image/apng,image/png",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "vary": null,
+      "diagnosis": "statique",
+      "format": "JPEG",
+      "dimensions": [
+        150,
+        150
+      ],
+      "bytes": 3413,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+      "animation_frames": 0,
+      "distinct_animation_frames": 0
+    },
+    {
+      "case": "webp",
+      "accept": "image/webp",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "vary": null,
+      "diagnosis": "statique",
+      "format": "JPEG",
+      "dimensions": [
+        150,
+        150
+      ],
+      "bytes": 3413,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+      "animation_frames": 0,
+      "distinct_animation_frames": 0
+    },
+    {
+      "case": "avif",
+      "accept": "image/avif",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "vary": null,
+      "diagnosis": "statique",
+      "format": "JPEG",
+      "dimensions": [
+        150,
+        150
+      ],
+      "bytes": 3413,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+      "animation_frames": 0,
+      "distinct_animation_frames": 0
+    }
+  ],
+  "identical_image_bytes": true
+}

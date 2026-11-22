@@ -6,6 +6,7 @@
 - [Inventaire technique des originaux fournis et résumé des mesures](originaux.json)
 - [Résultats d’import et de rendu rapportés sur Instagram et LinkedIn](essais-profils.json)
 - [Octets et formats mesurés entre IG16 et l’avatar Instagram servi publiquement](instagram-public-ig16.json)
+- [Négociation HTTP de l’avatar pour cinq valeurs du champ Accept](instagram-accept-probe.json)
 - [Contrôles synthétiques à poids égal avec 0, 1 et 2 trames](controle-poids/)
 - [Contrôles synthétiques de la seconde trame en rectangle et en plein cadre](controle-cadre/)
 - [Reçu LinkedIn à compléter à partir de la requête réellement observée](recu-linkedin-modele.json)

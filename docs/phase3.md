@@ -95,6 +95,16 @@ La séparation exacte entre conversion à l’import, stockage et génération d
 
 Pour ce profil web, la configuration reproductible de Ghostframe utilise le PNG fixe du poster, déjà accepté lors des essais. Le fichier APNG peut rester la source de l’animation pour les surfaces dont la livraison multiframe a été vérifiée. Le JPEG d’avatar mesuré ne transporte aucune séquence temporelle.
 
+### Négociation de format le 23 novembre 2026
+
+Le relevé réutilise la même URL `profile_pic_url` annoncée par le profil public pour cinq valeurs HTTP du champ `Accept`. Les valeurs couvrent toutes les images, un mélange de formats, PNG/APNG uniquement, WebP uniquement et AVIF uniquement. Les cinq réponses sont `200 image/jpeg`, sans champ `Vary`, et contiennent les mêmes 3 413 octets que le relevé précédent. Le décodage donne une seule image de 150 × 150 px à chaque fois. Le serveur peut ignorer les préférences `Accept`, comme le prévoit HTTP. [Mesure des cinq réponses](../evidence/phase3/instagram-accept-probe.json) · [RFC 9110, négociation proactive](https://www.rfc-editor.org/rfc/rfc9110.html#section-12.1)
+
+```sh
+python profile_avatar_probe.py residual.labs --out run/instagram-accept-probe.json
+```
+
+Le test part de la page web publique et conserve l’URL CDN annoncée telle quelle pour chaque requête. Le rapport donne le type annoncé, le décodeur, les dimensions, le SHA-256 et le nombre de trames distinctes. Une réponse multiframe est une candidate à une mesure de rendu sur le profil. Le résultat actuel écarte le choix de format via `Accept` sur cet avatar public. Il ne couvre pas d’autres adresses d’avatar que celle annoncée par le profil au moment du test.
+
 ## Collecter la variante réellement livrée
 
 Sur son propre profil d’essai, utiliser l’onglet Réseau du navigateur standard, filtrer les images et identifier la requête qui correspond à l’image réellement affichée. Consigner le code HTTP et `Content-Type`, puis enregistrer les octets de la réponse sans réexport via un éditeur. Répéter pour la miniature, la photo du profil et l’affichage agrandi si disponibles. Séparer web et mobile. Écarter l’aperçu local avant envoi et les captures de l’image comme méthode d’acquisition des octets. Les captures n’appartiennent qu’à la mesure visuelle. Ne pas partager de HAR complet, de cookies ou d’URL signée.
