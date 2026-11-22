@@ -12,7 +12,7 @@ from pipelines import TRANSFORMS, versions
 from pngcheck import describe, must
 from profile_diagnosis import DELIVERY_LOSS, NATIVE, RENDER_FIXED, audit
 from profile_fixtures import REFERENCE, compatibility_cases, raster_bytes, verify_original_pair
-from profile_weight_pair import ANIMATED, STATIC, pair
+from profile_weight_pair import ANIMATED, SINGLE, STATIC, controls
 
 SIZE = [96, 64]
 LOCAL_CASES = (
@@ -24,11 +24,13 @@ LOCAL_CASES = (
     ("profil-rgb-rectangles", "N01_apng_rgb_rectangles_320", "copy", "img"),
     ("poids-egal-png", STATIC, "copy", "img"),
     ("poids-egal-apng", ANIMATED, "copy", "img"),
+    ("poids-egal-apng-1-trame", SINGLE, "copy", "img"),
 )
 EXPECTED = {
     "profil-img": NATIVE, "miniature-aplatie": DELIVERY_LOSS, "profil-canvas": RENDER_FIXED,
     "profil-opencv-multiframe": NATIVE, "profil-webp-multiframe": NATIVE, "profil-rgb-rectangles": NATIVE,
     "poids-egal-png": "témoin_statique", "poids-egal-apng": NATIVE,
+    "poids-egal-apng-1-trame": "trames_livrées_sans_variation",
     "original-instagram-dans-img": NATIVE, "original-B-dans-img": NATIVE, "original-N01-dans-img": NATIVE,
 }
 
@@ -70,7 +72,7 @@ def run(output, browser, originals):
             ("original-N01-dans-img", "original-N01", "copy", "img"),
         ))
     paired_source = raster_bytes(inputs["original-B"]) if originals else inputs["IG01_statique_IDAT_320"]
-    inputs.update({key: data for key, (_, _, data) in pair(paired_source).items()})
+    inputs.update({key: data for key, (_, _, data) in controls(paired_source).items()})
 
     probes, deliveries = [], {}
     with local_lab(TRANSFORMS) as (base, pages):

@@ -31,6 +31,24 @@
       "frames": 24,
       "instagram": {"import": "refusé", "render": null, "note": "Le fichier ne se charge pas dans le client."},
       "linkedin": {"import": "accepté", "render": "fixe"}
+    },
+    {
+      "id": "IG12",
+      "file": "ghostframe-phase3-IG12-png-poids-egal.png",
+      "sha256": "976297cec75aa5416a02805d790d37e4073eb991f5ac45ef0070f20d0491565b",
+      "bytes": 13921,
+      "dimensions": [320, 320],
+      "frames": 0,
+      "instagram": {"import": "accepté", "render": "fixe", "note": "La photo de profil est mise à jour."}
+    },
+    {
+      "id": "IG13",
+      "file": "ghostframe-phase3-IG13-apng-poids-egal.png",
+      "sha256": "38d9104b9b092ac24fac41413218b8e15a0651b800771c12877b9f8701d33c6a",
+      "bytes": 13921,
+      "dimensions": [320, 320],
+      "frames": 2,
+      "instagram": {"import": "refusé", "render": null, "note": "Le fichier ne se charge pas dans le client."}
     }
   ]
 }

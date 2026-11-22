@@ -8,7 +8,7 @@ from PIL import Image
 import ghostframe as gf
 from pngcheck import ADAM7, describe, validate_png
 from profile_fixtures import REFERENCE, compatibility_cases, demo_motion, raster_bytes, verify_original_pair
-from profile_weight_pair import ANIMATED, STATIC, pair
+from profile_weight_pair import ANIMATED, SINGLE, STATIC, controls
 
 
 class FixtureTests(unittest.TestCase):
@@ -52,7 +52,7 @@ class FixtureTests(unittest.TestCase):
 
     def test_equal_weight_pair_keeps_accepted_poster_and_idat(self):
         baseline = self.cases["IG01_statique_IDAT_320"][2]
-        fixtures = pair(baseline)
+        fixtures = controls(baseline)
         static, animated = (fixtures[name][2] for name in (STATIC, ANIMATED))
         clean, still, moving = map(describe, (baseline, static, animated))
         self.assertEqual(len(static), len(animated))
@@ -62,6 +62,13 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(clean["poster_sha256"], still["poster_sha256"])
         self.assertEqual(still["png"]["metadata_blocks"], ["tEXt"])
         self.assertEqual(moving["distinct_animation_frames"], 2)
+        single = fixtures[SINGLE][2]
+        one = describe(single)
+        self.assertEqual(len(single), len(animated))
+        self.assertEqual(raster_bytes(single), baseline)
+        self.assertEqual(one["animation_frames"], 1)
+        self.assertEqual(one["frames"][0]["rgba_sha256"], clean["poster_sha256"])
+        self.assertNotIn(b"fdAT", {kind for kind, _ in gf.chunks(single)})
 
 
 class ValidatorTests(unittest.TestCase):

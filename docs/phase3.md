@@ -24,8 +24,10 @@ Le candidat N01 dérivé de B utilise les rectangles APNG et le RGB opaque. Il p
 | IG01, PNG fixe issu du flux `IDAT` de B | Accepté | Accepté, rendu fixe |
 | IG02, identique à B, APNG RGBA sans `gfRs` | Le client ne le charge pas | Accepté, rendu fixe |
 | N01, APNG RGB à rectangles sans `gfRs` | Le client ne le charge pas | Accepté, rendu fixe |
+| IG12, PNG fixe de 13 921 octets | Accepté et ajouté à la photo de profil, rendu fixe | Non testé |
+| IG13, APNG à deux trames de 13 921 octets | Le client ne le charge pas | Non testé |
 
-Sur Instagram, les refus d’IG02 et de N01 se produisent sans `gfRs`. Un canal alpha n’est pas requis pour reproduire ce comportement. Les deux fichiers qui ne se chargent pas contiennent la même séquence de 24 trames, alors que le témoin fixe partage le même poster à 320 × 320 px. Le nombre de trames, la structure APNG et le poids des fichiers restent à départager. Le témoignage ne localise pas le refus entre le client et le serveur.
+Sur Instagram, les refus d’IG02 et de N01 se produisent sans `gfRs`. Un canal alpha n’est pas requis pour reproduire ce comportement. IG12 et IG13 ont la même longueur, le même `IHDR` et le même `IDAT`. La photo de profil est mise à jour avec IG12, tandis qu’IG13 ne se charge pas. Un seuil portant seulement sur le poids total ou les dimensions ne peut expliquer cette différence. Le phénomène est reproduit dès deux trames. Le témoignage ne localise pas le refus entre le client et le serveur.
 
 Sur LinkedIn, l’encodage RGB et les rectangles n’ont pas changé le résultat visible. La capture des octets livrés reste l’expérience qui permet de distinguer aplatissement et rendu fixe. Le journal date ces observations et les associe aux SHA-256 des fichiers effectivement remis à l’utilisateur, indépendamment des analogues synthétiques. [Observations manuelles et identifiants](../evidence/phase3/essais-profils.json)
 
@@ -62,11 +64,11 @@ Le générateur emploie la même animation carrée et des variantes appariées. 
 
 Ajouter un bloc change naturellement le poids. Réencoder le même film avec un autre niveau zlib donne un témoin séparé pour le poids, sans garantie d’explorer tous les seuils possibles. Redimensionner conserve la séquence et les délais, mais modifie les échantillons et généralement le poids. Dans l’essai sur le poster distinct, l’IDAT est hors de la boucle tout en conservant exactement l’apparence de la première trame. LinkedIn documente JPG ou PNG et une taille d’au moins 400 × 400 px pour la photo de profil. Les acceptations à 320 px rapportées restent des observations sur les sessions testées. Utiliser une image et un compte d’essai autorisés et conformes aux règles de la surface. [Conditions de la photo de profil LinkedIn](https://www.linkedin.com/help/linkedin/answer/a549049?lang=en)
 
-### Paire à poids égal pour le prochain essai Instagram
+### Contrôles à poids égal sur Instagram
 
-IG12 est un PNG fixe et IG13 un APNG à deux trames avec un point visible qui clignote. Dans le kit local, tous deux font 13 921 octets et reprennent le même `IHDR` et le même flux `IDAT` qu’IG01. IG12 ajoute un bloc `tEXt` de taille calculée. IG13 ajoute uniquement les blocs nécessaires à la boucle APNG. Sur 19 captures du banc Chromium, IG12 montre un état et IG13 les deux états décodés. Les deux nouveaux fichiers restent à essayer sur Instagram.
+IG12 est un PNG fixe et IG13 un APNG à deux trames avec un point visible qui clignote. Dans le kit local, tous deux font 13 921 octets et reprennent le même `IHDR` et le même flux `IDAT` qu’IG01. IG12 ajoute un bloc `tEXt` de taille calculée. IG13 ajoute les blocs nécessaires à la boucle APNG. Sur 19 captures du banc Chromium, IG12 montre un état et IG13 les deux états décodés. L’essai Instagram rapporté porte sur le chargement et l’ajout au profil. Il ne contient pas de trace HTTP.
 
-Comparer les deux imports dans le même client et relever jusqu’où chacun se charge. Si IG12 passe et IG13 échoue, un simple seuil de taille du fichier ne suffit plus à expliquer la différence pour cette paire. Si l’APNG à deux trames passe, il faudra distinguer le nombre de trames, le poids et le traitement des fichiers à 24 trames. La ressource servie et les pixels réellement visibles doivent encore être mesurés après tout import réussi.
+IG14 garde le poids de 13 921 octets et le même poster. Il déclare une seule trame APNG avec `acTL` et `fcTL`, sans `fdAT`. Comme IG12, il emploie `tEXt` pour compléter sa longueur. La spécification autorise une seule trame, et Chromium affiche un état fixe. Un refus d’IG14 reproduirait le comportement sans deuxième trame ni bloc `fdAT`. Une acceptation orienterait le diagnostic vers le traitement de plusieurs trames ou des blocs `fdAT`. L’essai Instagram sur IG14 reste à effectuer. [Spécification PNG 3](https://www.w3.org/TR/png/)
 
 ## Collecter la variante réellement livrée
 
