@@ -1,0 +1,66 @@
+{
+  "role": "avatar du profil web public, annoncé par les références profile_pic_url et og:image",
+  "profile": "https://www.instagram.com/residual.labs/",
+  "http": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "content_length": "3413"
+  },
+  "cdn_host": "scontent-cdg6-1.cdninstagram.com",
+  "delivered": {
+    "format": "JPEG",
+    "mime_from_bytes": "image/jpeg",
+    "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb",
+    "bytes": 3413,
+    "dimensions": [
+      150,
+      150
+    ],
+    "animation_frames": 0,
+    "distinct_animation_frames": 0,
+    "poster_sha256": "dafb321d05ff3bbe2226678fed071a1628dcf62e3dbd8ac668b5e96b06f9d7e0"
+  },
+  "original": {
+    "format": "PNG",
+    "sha256": "a58b98f997c445d359a96ef8f3cc349bf32f0cf904c5281d8fe2742607b691d3",
+    "bytes": 14379,
+    "dimensions": [
+      320,
+      320
+    ],
+    "animation_frames": 2,
+    "distinct_animation_frames": 2,
+    "poster_sha256": "b37437d05d4ab5605f079662222ea4f6e1e4ad25723ea4d13553ac9d1d7ddfcd"
+  },
+  "similarity": {
+    "resize": "LANCZOS resize to served dimensions",
+    "mask": "pixels with a maximum RGB channel change above 12",
+    "mask_pixels": 159,
+    "errors": [
+      {
+        "frame": 1,
+        "mean_absolute_error_rgb": 2.134,
+        "mean_absolute_error_motion_region_rgb": 0.0
+      },
+      {
+        "frame": 2,
+        "mean_absolute_error_rgb": 3.353,
+        "mean_absolute_error_motion_region_rgb": 170.774
+      }
+    ]
+  },
+  "date": "2026-11-22",
+  "references": {
+    "profile_pic_url": {
+      "http_status": 200,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb"
+    },
+    "og:image": {
+      "http_status": 200,
+      "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb"
+    },
+    "same_bytes": true
+  },
+  "diagnosis": "animation_absente_de_la_ressource_servie",
+  "scope": "Résultat limité à la ressource annoncée par la page web publique à la date du relevé."
+}

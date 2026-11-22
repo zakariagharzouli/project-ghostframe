@@ -4,6 +4,8 @@ Prototype de Residual Labs pour mesurer ce qu’une chaîne de traitement PNG co
 
 La [phase 2](docs/phase2.md) ajoute des rectangles APNG, un transcodage WebP animé, une capsule raster à parité et un banc comparatif Pillow/OpenCV. Voir le [rapport Phase 2](docs/phase2-results.md) et la [matrice mesurée](evidence/phase2/matrice.md).
 
+La [phase 3](docs/phase3.md) compare les originaux Instagram et LinkedIn fournis par l’utilisateur, génère des PNG carrés appariés et distingue la perte d’animation dans la ressource du rendu fixe côté client. Les [témoins synthétiques](evidence/phase3/) se reproduisent avec les commandes du rapport.
+
 ![Capture du navigateur. Comparaison entre l’APNG natif, son raster aplati, l’APNG restauré et l’atlas joué en CSS.](evidence/render.gif)
 
 Le GIF ci-dessus regroupe les zones de quatre surfaces capturées dans Chrome. La [démonstration HTML](evidence/demo.html) utilise les PNG de l’expérience et fonctionne hors ligne une fois téléchargée. Ouvrir le fichier dans un navigateur moderne.

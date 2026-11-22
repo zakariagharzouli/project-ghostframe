@@ -116,9 +116,10 @@ class HTTPTests(unittest.TestCase):
                 (b"not a PNG", "image/png", 422),
             ):
                 request = Request(f"{base}/upload/copy", data=body, headers={"Content-Type": mime})
-                with self.subTest(status=status), self.assertRaises(HTTPError) as raised:
-                    urlopen(request, timeout=5)
-                self.assertEqual(raised.exception.code, status)
+                with self.subTest(status=status):
+                    with self.assertRaises(HTTPError) as raised:
+                        urlopen(request, timeout=5)
+                    self.assertEqual(raised.exception.code, status)
 
 
 if __name__ == "__main__":

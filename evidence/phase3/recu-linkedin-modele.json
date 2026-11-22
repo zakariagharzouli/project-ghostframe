@@ -1,0 +1,35 @@
+{
+  "platform": "LinkedIn",
+  "surface": "Photo de profil, essai B",
+  "accepted": true,
+  "manual_render": "fixe, rapporté par l'utilisateur",
+  "variants": [
+    {
+      "role": "miniature",
+      "file": null,
+      "mime": null,
+      "client": null,
+      "delivery_verified": false,
+      "standard_client": null,
+      "captures": []
+    },
+    {
+      "role": "photo-du-profil",
+      "file": null,
+      "mime": null,
+      "client": null,
+      "delivery_verified": false,
+      "standard_client": null,
+      "captures": []
+    },
+    {
+      "role": "vue-agrandie",
+      "file": null,
+      "mime": null,
+      "client": null,
+      "delivery_verified": false,
+      "standard_client": null,
+      "captures": []
+    }
+  ]
+}
