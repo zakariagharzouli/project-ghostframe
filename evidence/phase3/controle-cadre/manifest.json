@@ -1,0 +1,296 @@
+[
+  {
+    "file": "IG15_apng_2_trames_rectangle_320.png",
+    "factor": "Seconde trame en rectangle 32 × 32, composition OVER",
+    "reference": "IG16_apng_2_trames_pleines_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 0
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 3196,
+    "sha256": "0a29640edeaf1e8ae19262fb8294d2ac1fecdc4d1652850462f06b0f60439ff4",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 2,
+    "distinct_animation_frames": 2,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 500.0
+      },
+      {
+        "rgba_sha256": "c546ab7f984127a0b2656ac4a8dc4033a9ce05932ad61757605a0ac297a03918",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 500.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "tEXt",
+          "offset": 33,
+          "bytes": 463,
+          "sha256": "aba2eedb5e5ad763cc17c837236d5c0e3e684a8147a5be3779543dc93b5c9afb"
+        },
+        {
+          "type": "acTL",
+          "offset": 508,
+          "bytes": 8,
+          "sha256": "9ee50aea7e52f17dc807488bbd631e368da3a3ad3d5a31ad4b0f049581366c4d"
+        },
+        {
+          "type": "fcTL",
+          "offset": 528,
+          "bytes": 26,
+          "sha256": "b817a8006a81b190db5347c2d9ab4e503eee109b723346bbc3b4517cd33a5b36"
+        },
+        {
+          "type": "IDAT",
+          "offset": 566,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 3008,
+          "bytes": 26,
+          "sha256": "1ec97e7d629503e4db3e0fd6d94fd19be26cf594e293e5e42aba9356135b9923"
+        },
+        {
+          "type": "fdAT",
+          "offset": 3046,
+          "bytes": 126,
+          "sha256": "c6c60cac2da3ac0eb1b24998f50601ea3241629a0318a20292fa6f8d543cb4f7"
+        },
+        {
+          "type": "IEND",
+          "offset": 3184,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              500,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              62,
+              33,
+              32,
+              32
+            ],
+            "delay": [
+              500,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 1,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": [
+        "tEXt"
+      ]
+    }
+  },
+  {
+    "file": "IG16_apng_2_trames_pleines_320.png",
+    "factor": "Seconde trame plein cadre 320 × 320, composition OVER",
+    "reference": null,
+    "comparison": null,
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 3196,
+    "sha256": "36decae79f29bdd2530d1ad6674770f195aa95ecc88457ebba42757e4fbd0ed5",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 2,
+    "distinct_animation_frames": 2,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 500.0
+      },
+      {
+        "rgba_sha256": "c546ab7f984127a0b2656ac4a8dc4033a9ce05932ad61757605a0ac297a03918",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 500.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "tEXt",
+          "offset": 33,
+          "bytes": 55,
+          "sha256": "27f99bda4fc5484ebfa080078f349ae1b6268aebf1e7e6218a2d90601f1d4767"
+        },
+        {
+          "type": "acTL",
+          "offset": 100,
+          "bytes": 8,
+          "sha256": "9ee50aea7e52f17dc807488bbd631e368da3a3ad3d5a31ad4b0f049581366c4d"
+        },
+        {
+          "type": "fcTL",
+          "offset": 120,
+          "bytes": 26,
+          "sha256": "b817a8006a81b190db5347c2d9ab4e503eee109b723346bbc3b4517cd33a5b36"
+        },
+        {
+          "type": "IDAT",
+          "offset": 158,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2600,
+          "bytes": 26,
+          "sha256": "f5bd4a236c5e7219c10eb92a8f4bb0951767ed29e3b6b15d66290fd02f07c297"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2638,
+          "bytes": 534,
+          "sha256": "299b8c1b9447384d5160c8f7be775cd35ff1e4429c1b5247c30ea67590abadb2"
+        },
+        {
+          "type": "IEND",
+          "offset": 3184,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              500,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              500,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 1,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": [
+        "tEXt"
+      ]
+    }
+  }
+]

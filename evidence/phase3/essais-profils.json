@@ -49,6 +49,15 @@
       "dimensions": [320, 320],
       "frames": 2,
       "instagram": {"import": "refusé", "render": null, "note": "Le fichier ne se charge pas dans le client."}
+    },
+    {
+      "id": "IG14",
+      "file": "ghostframe-phase3-IG14-apng-1-trame.png",
+      "sha256": "92be875b1b18b1bf39e31e2e66955eb79fae497e647585aff3a61dc14612904a",
+      "bytes": 13921,
+      "dimensions": [320, 320],
+      "frames": 1,
+      "instagram": {"import": "accepté", "render": null}
     }
   ]
 }

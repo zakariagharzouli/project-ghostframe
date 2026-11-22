@@ -8,7 +8,7 @@ from PIL import Image
 import ghostframe as gf
 from pngcheck import ADAM7, describe, validate_png
 from profile_fixtures import REFERENCE, compatibility_cases, demo_motion, raster_bytes, verify_original_pair
-from profile_weight_pair import ANIMATED, SINGLE, STATIC, controls
+from profile_weight_pair import ANIMATED, FULL, REGION, SINGLE, STATIC, controls, frame_bounds_controls
 
 
 class FixtureTests(unittest.TestCase):
@@ -69,6 +69,21 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(one["animation_frames"], 1)
         self.assertEqual(one["frames"][0]["rgba_sha256"], clean["poster_sha256"])
         self.assertNotIn(b"fdAT", {kind for kind, _ in gf.chunks(single)})
+
+    def test_equal_weight_frame_bounds_render_the_same_motion(self):
+        baseline = self.cases["IG01_statique_IDAT_320"][2]
+        fixtures = frame_bounds_controls(baseline)
+        cropped, full = (fixtures[name][2] for name in (REGION, FULL))
+        self.assertEqual(len(cropped), len(full))
+        self.assertEqual(raster_bytes(cropped), baseline)
+        self.assertEqual(raster_bytes(full), baseline)
+        a, b = map(describe, (cropped, full))
+        self.assertEqual(a["frames"], b["frames"])
+        self.assertEqual(a["frames"], describe(controls(baseline)[ANIMATED][2])["frames"])
+        for report, bounds in ((a, [62, 33, 32, 32]), (b, [0, 0, 320, 320])):
+            frame = report["png"]["animation"]["frames"][1]
+            self.assertEqual(frame["rect"], bounds)
+            self.assertEqual(frame["blend"], 1)
 
 
 class ValidatorTests(unittest.TestCase):

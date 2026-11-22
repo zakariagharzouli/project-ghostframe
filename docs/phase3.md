@@ -26,6 +26,7 @@ Le candidat N01 dérivé de B utilise les rectangles APNG et le RGB opaque. Il p
 | N01, APNG RGB à rectangles sans `gfRs` | Le client ne le charge pas | Accepté, rendu fixe |
 | IG12, PNG fixe de 13 921 octets | Accepté et ajouté à la photo de profil, rendu fixe | Non testé |
 | IG13, APNG à deux trames de 13 921 octets | Le client ne le charge pas | Non testé |
+| IG14, APNG à une trame de 13 921 octets | Accepté | Non testé |
 
 Sur Instagram, les refus d’IG02 et de N01 se produisent sans `gfRs`. Un canal alpha n’est pas requis pour reproduire ce comportement. IG12 et IG13 ont la même longueur, le même `IHDR` et le même `IDAT`. La photo de profil est mise à jour avec IG12, tandis qu’IG13 ne se charge pas. Un seuil portant seulement sur le poids total ou les dimensions ne peut expliquer cette différence. Le phénomène est reproduit dès deux trames. Le témoignage ne localise pas le refus entre le client et le serveur.
 
@@ -68,7 +69,13 @@ Ajouter un bloc change naturellement le poids. Réencoder le même film avec un 
 
 IG12 est un PNG fixe et IG13 un APNG à deux trames avec un point visible qui clignote. Dans le kit local, tous deux font 13 921 octets et reprennent le même `IHDR` et le même flux `IDAT` qu’IG01. IG12 ajoute un bloc `tEXt` de taille calculée. IG13 ajoute les blocs nécessaires à la boucle APNG. Sur 19 captures du banc Chromium, IG12 montre un état et IG13 les deux états décodés. L’essai Instagram rapporté porte sur le chargement et l’ajout au profil. Il ne contient pas de trace HTTP.
 
-IG14 garde le poids de 13 921 octets et le même poster. Il déclare une seule trame APNG avec `acTL` et `fcTL`, sans `fdAT`. Comme IG12, il emploie `tEXt` pour compléter sa longueur. La spécification autorise une seule trame, et Chromium affiche un état fixe. Un refus d’IG14 reproduirait le comportement sans deuxième trame ni bloc `fdAT`. Une acceptation orienterait le diagnostic vers le traitement de plusieurs trames ou des blocs `fdAT`. L’essai Instagram sur IG14 reste à effectuer. [Spécification PNG 3](https://www.w3.org/TR/png/)
+IG14 garde le poids de 13 921 octets et le même poster. Il déclare une seule trame APNG avec `acTL` et `fcTL`, sans `fdAT`. Comme IG12, il emploie `tEXt` pour compléter sa longueur. **Instagram accepte IG14 dans l’essai rapporté.** La seule présence des blocs `acTL` et `fcTL` ne suffit donc pas à provoquer le refus. IG13 ajoute une deuxième trame encodée par `fdAT` dans un rectangle décalé de 32 × 32 px. La réponse du client à ces différences reste à attribuer. [Spécification PNG 3](https://www.w3.org/TR/png/)
+
+### Deux trames en rectangle ou en plein cadre
+
+IG15 et IG16 gardent le poster encodé d’IG01, les mêmes deux trames décodées et les mêmes délais de 500 ms. Tous deux utilisent `OVER` et un bloc `fdAT` pour la deuxième trame. IG15 encode cette trame sur un rectangle décalé de 32 × 32 px. IG16 encode le même signal sur une trame complète de 320 × 320 px en remplissant les pixels autour du point avec de la transparence. Les deux fichiers utilisent le même texte `tEXt` avec une quantité de remplissage calculée pour égaliser le poids. Ils font chacun 14 379 octets dans le kit local. Chromium affiche les deux mêmes états dans les deux cas.
+
+Tester d’abord IG16. Un refus reproduirait le problème avec seulement deux trames et une deuxième trame en plein cadre. Si IG16 est accepté, tester IG15 permet de comparer le rectangle à poids, poster, délai et rendu d’origine égaux. Une acceptation n’établit la lecture animée qu’après observation du profil standard. [Contrôles synthétiques reproductibles](../evidence/phase3/controle-cadre/)
 
 ## Collecter la variante réellement livrée
 
@@ -81,6 +88,7 @@ python -m pip install -r requirements-phase2.txt
 python -m unittest discover -s tests -v
 python profile_fixtures.py
 python profile_weight_pair.py run/phase3-suite/IG01_statique_IDAT_320.png
+python profile_weight_pair.py run/phase3-suite/IG01_statique_IDAT_320.png --frame-bounds --out run/phase3-frame-bounds
 python pngcheck.py run/phase3-suite/IG02_apng_rgba_320.png
 python profile_lab.py --verify
 python profile_diagnosis.py run/phase3-profiles/source-IG02_apng_rgba_320.png run/phase3-profiles/recu-IG02_apng_rgba_320.json
