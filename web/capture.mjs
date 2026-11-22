@@ -48,9 +48,11 @@ async function endpoint() {
   for (let attempt = 0; attempt < 160; attempt++) {
     if (launchError) throw launchError;
     if (child.exitCode !== null) throw new Error(`Le navigateur a quitté avec le code ${child.exitCode}. ${stderr}`);
-    if (existsSync(marker)) {
+    try {
       const port = readFileSync(marker, "utf8").split(/\r?\n/)[0];
       if (port) return `http://127.0.0.1:${port}`;
+    } catch (error) {
+      if (!["ENOENT", "EBUSY"].includes(error.code)) throw error;
     }
     await sleep(100);
   }

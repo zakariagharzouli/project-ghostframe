@@ -5,7 +5,6 @@ import html
 import io
 import json
 import os
-import re
 import subprocess
 import sys
 import threading
@@ -106,7 +105,7 @@ main { display: grid; grid-template-columns: repeat(4, 260px); gap: 12px }
 section { background: white; padding: 10px; min-height: 114px }
 h2 { font-size: 13px; line-height: 20px; margin: 0 0 8px }
 .probe { display: block; width: 96px; height: 64px }
-.atlas-still { object-fit: none; object-position: left top }
+.native-size { object-fit: none; object-position: left top }
 .background { background-repeat: no-repeat }
 .atlas { background-repeat: no-repeat; animation: cycle 1400ms steps(4, end) infinite }
 @keyframes cycle { to { background-position: 0 -256px } }
@@ -133,7 +132,8 @@ def test_page(probes):
     cards = []
     for probe in probes:
         name, url, surface = (probe[k] for k in ("name", "url", "surface"))
-        extra_class = " atlas-still" if probe["case"] == "atlas-raster" and surface == "img" else ""
+        native_size = probe.get("native_size") or (probe["case"] == "atlas-raster" and surface == "img")
+        extra_class = " native-size" if native_size else ""
         common = f'class="probe {surface}{extra_class}" data-probe="{html.escape(name)}"'
         if surface == "canvas":
             element = f'<canvas {common} width="96" height="64" data-src="{url}"></canvas>'
@@ -150,7 +150,8 @@ def test_page(probes):
 
 
 @contextmanager
-def local_lab():
+def local_lab(extra_transforms=None):
+    extra_transforms = extra_transforms or {}
     storage = {}
     pages = {}
 
@@ -168,20 +169,20 @@ def local_lab():
             self.wfile.write(body)
 
         def do_GET(self):
-            match = re.fullmatch(r"/images/([0-9a-f]{64})\.png", self.path)
             if self.path in pages:
                 self.reply(200, "text/html; charset=utf-8", pages[self.path])
-            elif match and match[1] in storage:
-                self.reply(200, "image/png", storage[match[1]])
+            elif self.path in storage:
+                body, mime = storage[self.path]
+                self.reply(200, mime, body)
             else:
                 self.send_error(404)
 
         def do_POST(self):
             profile = self.path.removeprefix("/upload/")
-            if not self.path.startswith("/upload/") or profile not in PROFILES:
+            if not self.path.startswith("/upload/") or (profile not in PROFILES and profile not in extra_transforms):
                 self.send_error(404)
                 return
-            if self.headers.get_content_type() != "image/png":
+            if not self.headers.get("Content-Type") or self.headers.get_content_type() != "image/png":
                 self.send_error(415)
                 return
             try:
@@ -190,13 +191,19 @@ def local_lab():
                     self.send_error(413)
                     return
                 incoming = self.rfile.read(length)
-                rendered = transform(incoming, profile)
+                if len(incoming) != length:
+                    raise ValueError("Corps HTTP incomplet")
+                if profile in extra_transforms:
+                    gf.decoded_png(incoming)
+                    rendered, suffix, mime = extra_transforms[profile](incoming)
+                else:
+                    rendered, suffix, mime = transform(incoming, profile), "png", "image/png"
             except (ValueError, KeyError, OSError, SyntaxError, EOFError, gf.zlib.error, gf.struct.error):
                 self.send_error(422)
                 return
-            key = gf.digest(rendered)
-            storage[key] = rendered
-            answer = json.dumps({"url": f"/images/{key}.png"}).encode()
+            url = f"/images/{gf.digest(rendered)}.{suffix}"
+            storage[url] = rendered, mime
+            answer = json.dumps({"url": url}).encode()
             self.reply(201, "application/json", answer)
 
     with ThreadingHTTPServer(("127.0.0.1", 0), Handler) as server:
@@ -209,8 +216,8 @@ def local_lab():
             thread.join()
 
 
-def submit(base, blob, profile):
-    request = Request(f"{base}/upload/{profile}", data=blob, headers={"Content-Type": "image/png"})
+def submit(base, blob, profile, declared_type="image/png"):
+    request = Request(f"{base}/upload/{profile}", data=blob, headers={"Content-Type": declared_type})
     with urlopen(request, timeout=15) as response:
         status = response.status
         url = json.load(response)["url"]
@@ -316,7 +323,7 @@ def probes_for(reports):
     return probes
 
 
-def visual_audit(base, output, browser, probes, reports, manifest):
+def capture_tiles(base, output, browser):
     captures = (output / "captures").resolve()
     captures.mkdir(exist_ok=True)
     command = ["node", str(ROOT / "web" / "capture.mjs"), f"{base}/probe", str(captures)]
@@ -325,7 +332,7 @@ def visual_audit(base, output, browser, probes, reports, manifest):
     subprocess.run(command, check=True, timeout=70)
     record = json.loads((captures / "capture.json").read_text(encoding="utf-8"))
     positions = {item["name"]: item for item in record.pop("positions")}
-    histograms = {probe["name"]: {} for probe in probes}
+    histograms = {name: {} for name in positions}
     for sample in record["samples"]:
         with Image.open(captures / sample["file"]) as shot:
             sample["render_sha256"] = {}
@@ -336,7 +343,11 @@ def visual_audit(base, output, browser, probes, reports, manifest):
                 counts = histograms[name]
                 counts[key] = counts.get(key, 0) + 1
                 sample["render_sha256"][name] = key
+    return record, positions, histograms
 
+
+def visual_audit(base, output, browser, probes, reports, manifest):
+    record, positions, histograms = capture_tiles(base, output, browser)
     record["probes"] = []
     for probe in probes:
         after = reports[probe["case"]]["after"]
