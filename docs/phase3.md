@@ -27,6 +27,7 @@ Le candidat N01 dérivé de B utilise les rectangles APNG et le RGB opaque. Il p
 | IG12, PNG fixe de 13 921 octets | Accepté et ajouté à la photo de profil, rendu fixe | Non testé |
 | IG13, APNG à deux trames de 13 921 octets | Le client ne le charge pas | Non testé |
 | IG14, APNG à une trame de 13 921 octets | Accepté | Non testé |
+| IG16, APNG à deux trames plein cadre de 14 379 octets | Accepté, rendu fixe | Non testé |
 
 Sur Instagram, les refus d’IG02 et de N01 se produisent sans `gfRs`. Un canal alpha n’est pas requis pour reproduire ce comportement. IG12 et IG13 ont la même longueur, le même `IHDR` et le même `IDAT`. La photo de profil est mise à jour avec IG12, tandis qu’IG13 ne se charge pas. Un seuil portant seulement sur le poids total ou les dimensions ne peut expliquer cette différence. Le phénomène est reproduit dès deux trames. Le témoignage ne localise pas le refus entre le client et le serveur.
 
@@ -75,7 +76,9 @@ IG14 garde le poids de 13 921 octets et le même poster. Il déclare une seule t
 
 IG15 et IG16 gardent le poster encodé d’IG01, les mêmes deux trames décodées et les mêmes délais de 500 ms. Tous deux utilisent `OVER` et un bloc `fdAT` pour la deuxième trame. IG15 encode cette trame sur un rectangle décalé de 32 × 32 px. IG16 encode le même signal sur une trame complète de 320 × 320 px en remplissant les pixels autour du point avec de la transparence. Les deux fichiers utilisent le même texte `tEXt` avec une quantité de remplissage calculée pour égaliser le poids. Ils font chacun 14 379 octets dans le kit local. Chromium affiche les deux mêmes états dans les deux cas.
 
-Tester d’abord IG16. Un refus reproduirait le problème avec seulement deux trames et une deuxième trame en plein cadre. Si IG16 est accepté, tester IG15 permet de comparer le rectangle à poids, poster, délai et rendu d’origine égaux. Une acceptation n’établit la lecture animée qu’après observation du profil standard. [Contrôles synthétiques reproductibles](../evidence/phase3/controle-cadre/)
+L’utilisateur rapporte qu’**Instagram a accepté IG16 et l’affiche fixe**, et qu’il l’observe aussi fixe sur son bureau. Le fichier IG16 fourni contient toujours deux trames distinctes de 500 ms, avec une boucle infinie. Le banc Chromium avait affiché les deux états à partir de ces octets. L’application utilisée sur le bureau et l’empreinte de la copie qu’elle ouvrait sont inconnues. L’ouverture directe en Edge n’a pas pu être vérifiée par automatisation dans la session Windows, les fenêtres étant minimisées et le navigateur intégré ayant refusé l’ouverture d’une URL locale `file:`.
+
+IG16 confirme qu’un APNG à deux trames peut franchir l’import dans cet essai. Pour distinguer un aplatissement d’un affichage fixe, enregistrer l’image effectivement servie depuis le profil Instagram et la comparer à l’original. Si le fichier servi contient une seule image, la perte intervient avant l’affichage. S’il contient encore les deux trames, examiner le rendu de cette ressource dans la surface testée. IG15 reste disponible pour la comparaison de la géométrie des trames, avec import et rendu indéterminés. [Contrôles synthétiques reproductibles](../evidence/phase3/controle-cadre/)
 
 ## Collecter la variante réellement livrée
 

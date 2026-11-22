@@ -58,6 +58,16 @@
       "dimensions": [320, 320],
       "frames": 1,
       "instagram": {"import": "accepté", "render": null}
+    },
+    {
+      "id": "IG16",
+      "file": "ghostframe-phase3-IG16-apng-plein-cadre.png",
+      "sha256": "a58b98f997c445d359a96ef8f3cc349bf32f0cf904c5281d8fe2742607b691d3",
+      "bytes": 14379,
+      "dimensions": [320, 320],
+      "frames": 2,
+      "instagram": {"import": "accepté", "render": "fixe"},
+      "desktop": {"render": "fixe", "viewer": null, "copy_sha256": null}
     }
   ]
 }
