@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "provenance": "Observation manuelle communiquée par l’utilisateur. Les fichiers d’entrée sont identifiés par SHA-256.",
+  "provenance": "Observations manuelles communiquées par l’utilisateur et mesure de la livraison publique pour IG16. Les fichiers sont identifiés par SHA-256.",
   "files": [
     {
       "id": "IG01",
@@ -66,7 +66,18 @@
       "bytes": 14379,
       "dimensions": [320, 320],
       "frames": 2,
-      "instagram": {"import": "accepté", "render": "fixe"},
+      "instagram": {
+        "import": "accepté",
+        "render": "fixe",
+        "delivery": {
+          "surface": "Avatar du profil web public, référencé par profile_pic_url et og:image",
+          "http_status": 200,
+          "mime": "image/jpeg",
+          "dimensions": [150, 150],
+          "animation_frames": 0,
+          "sha256": "db91497d9c8c72a48a0be08a87654ba57fa56d8576d10b47563de185dd80a1eb"
+        }
+      },
       "desktop": {"render": "fixe", "viewer": null, "copy_sha256": null}
     }
   ]

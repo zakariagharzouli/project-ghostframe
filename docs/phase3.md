@@ -78,7 +78,22 @@ IG15 et IG16 gardent le poster encodé d’IG01, les mêmes deux trames décodé
 
 L’utilisateur rapporte qu’**Instagram a accepté IG16 et l’affiche fixe**, et qu’il l’observe aussi fixe sur son bureau. Le fichier IG16 fourni contient toujours deux trames distinctes de 500 ms, avec une boucle infinie. Le banc Chromium avait affiché les deux états à partir de ces octets. L’application utilisée sur le bureau et l’empreinte de la copie qu’elle ouvrait sont inconnues. L’ouverture directe en Edge n’a pas pu être vérifiée par automatisation dans la session Windows, les fenêtres étant minimisées et le navigateur intégré ayant refusé l’ouverture d’une URL locale `file:`.
 
-IG16 confirme qu’un APNG à deux trames peut franchir l’import dans cet essai. Pour distinguer un aplatissement d’un affichage fixe, enregistrer l’image effectivement servie depuis le profil Instagram et la comparer à l’original. Si le fichier servi contient une seule image, la perte intervient avant l’affichage. S’il contient encore les deux trames, examiner le rendu de cette ressource dans la surface testée. IG15 reste disponible pour la comparaison de la géométrie des trames, avec import et rendu indéterminés. [Contrôles synthétiques reproductibles](../evidence/phase3/controle-cadre/)
+IG16 confirme qu’un APNG à deux trames peut franchir l’import dans cet essai. IG15 reste disponible pour la comparaison de la géométrie des trames, avec import et rendu indéterminés. [Contrôles synthétiques reproductibles](../evidence/phase3/controle-cadre/)
+
+## Mesure de l’avatar web public Instagram
+
+L’utilisateur a identifié `residual.labs` comme le profil qui utilise IG16. La réponse HTML publique a fourni une URL `profile_pic_url` dans les données du profil et une URL `og:image` dans les métadonnées. Les deux requêtes sur le CDN Instagram ont renvoyé `200 image/jpeg` avec des octets identiques. [Profil mesuré](https://www.instagram.com/residual.labs/) · [Données de l’essai](../evidence/phase3/instagram-public-ig16.json)
+
+| Étape | Format | Dimensions | Octets | Images distinctes |
+|---|---|---|---:|---:|
+| IG16 avant import | APNG | 320 × 320 | 14 379 | 2 |
+| Avatar web public | JPEG | 150 × 150 | 3 413 | 1 |
+
+Après redimensionnement de chaque trame locale à 150 × 150 par Lanczos, la région animée couvre 159 pixels selon le masque de différence RGB utilisé. Dans cette région, l’erreur absolue moyenne avec le JPEG est de **0** pour la première trame et **170,774** pour la deuxième, sur une échelle de 0 à 255. Le JPEG conserve l’état sans le point clair. Le comparateur classe le cas comme `animation_absente_de_la_ressource_servie`. L’animation est perdue avant le rendu de cette variante web publique.
+
+La séparation exacte entre conversion à l’import, stockage et génération de la variante CDN reste indéterminée. La documentation Meta expose le champ `profile_picture_url` pour les comptes professionnels autorisés. Elle ne décrit pas l’algorithme interne de conversion de cet avatar. Les autres variantes et les autres surfaces restent hors de cette mesure. [Documentation Meta IG User](https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/v21.0/)
+
+Pour ce profil web, la configuration reproductible de Ghostframe utilise le PNG fixe du poster, déjà accepté lors des essais. Le fichier APNG peut rester la source de l’animation pour les surfaces dont la livraison multiframe a été vérifiée. Le JPEG d’avatar mesuré ne transporte aucune séquence temporelle.
 
 ## Collecter la variante réellement livrée
 

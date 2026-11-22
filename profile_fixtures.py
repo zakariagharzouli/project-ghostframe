@@ -139,6 +139,18 @@ def write_suite(directory, cases):
     return manifests
 
 
+def observation_columns(result, date):
+    delivery = result.get("delivery", {})
+    if not result:
+        provenance = "généré, non essayé sur la plateforme"
+    elif delivery:
+        provenance = "observation manuelle utilisateur et mesure CDN publique"
+    else:
+        provenance = "observation manuelle utilisateur"
+    return [provenance, result.get("import", "non testé"), "", delivery.get("sha256"), delivery.get("mime"),
+            delivery.get("animation_frames"), result.get("render"), "", result.get("note"), date if result else ""]
+
+
 def write_manual_matrices(directory, manifests, exact_originals=None):
     observations = json.loads(MANUAL_OBSERVATIONS.read_text(encoding="utf-8"))
     header = ("fichier", "référence", "facteur", "octets", "dimensions", "trames", "sha256_source", "provenance",
@@ -168,15 +180,12 @@ def write_manual_matrices(directory, manifests, exact_originals=None):
                     result = observed[platform] if observed else {}
                     writer.writerow([report["file"], report["reference"], report["factor"], report["bytes"],
                                      "x".join(map(str, report["dimensions"])), report["animation_frames"], report["sha256"],
-                                     "observation manuelle utilisateur" if observed else "généré, non essayé sur la plateforme",
-                                     result.get("import", "non testé"), "", "", "", "", result.get("render"), "",
-                                     result.get("note"), observations["date"] if observed else ""])
+                                     *observation_columns(result, observations["date"])])
             for observed in matched.values():
                 result = observed[platform]
                 writer.writerow([observed["file"], "", observed["id"], observed["bytes"],
                                  "x".join(map(str, observed["dimensions"])), observed["frames"], observed["sha256"],
-                                 "observation manuelle utilisateur", result["import"], "", "", "", "",
-                                 result.get("render"), "", result.get("note"), observations["date"]])
+                                 *observation_columns(result, observations["date"])])
 
 
 def generate(directory, original=None, linkedin_b=None):
