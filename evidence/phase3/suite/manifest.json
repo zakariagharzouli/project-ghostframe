@@ -1,0 +1,2992 @@
+[
+  {
+    "file": "IG01_statique_IDAT_320.png",
+    "factor": "Trames retirées, IHDR et IDAT conservés",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": false,
+      "delta_bytes": -7586
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 2487,
+    "sha256": "379b01d6a42527b6e77bf90de71d473e6db20f7aaa485ac6d14a2f0d7e4f6ee0",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 0,
+    "distinct_animation_frames": 0,
+    "plays": null,
+    "frames": [],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "IDAT",
+          "offset": 33,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "IEND",
+          "offset": 2475,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": null,
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG02_apng_rgba_320.png",
+    "factor": "APNG témoin, poster inclus, RGBA opaque",
+    "reference": null,
+    "comparison": null,
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 10073,
+    "sha256": "3ddd76839e231e3b6bdaf128827340b25f459f749bbd00b81f77e9fa1112d8a8",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2533,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2571,
+          "bytes": 2468,
+          "sha256": "5f68ec0184bacdfb79344bd570e53f55050469ccb382317f007f84888f482100"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5051,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5089,
+          "bytes": 2443,
+          "sha256": "fbf15ca29331b5979cc1ce95e56909e76c3d49a5587b6dd0935eb0566edfd549"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7544,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7582,
+          "bytes": 2467,
+          "sha256": "fd8761d51076646efdd5cfabd8c16f50d94d330fc4b39f256b629e0af500d0e5"
+        },
+        {
+          "type": "IEND",
+          "offset": 10061,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG03_apng_rectangles_320.png",
+    "factor": "Rectangles fcTL avec les mêmes pixels décodés",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": -3673
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 6400,
+    "sha256": "1397dcc934e1a4f2c0257912965f4c22e652d90d7e1b2301ed28728b898fd736",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2533,
+          "bytes": 26,
+          "sha256": "c50ad0a8ae6ba0f8a3b12310ec3ed941509ce3d10723370d04d025f54f7f2223"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2571,
+          "bytes": 1039,
+          "sha256": "9d8a703bd8be74881807d11d99e2365c8e9b382d5f89d744895e8cb86214cf0e"
+        },
+        {
+          "type": "fcTL",
+          "offset": 3622,
+          "bytes": 26,
+          "sha256": "30d99b2e1365076e7a597d80ec39393f7e78c9fd605032b42cc4a493e683c0c0"
+        },
+        {
+          "type": "fdAT",
+          "offset": 3660,
+          "bytes": 1600,
+          "sha256": "69b4bd45677fbcbeff2797c7cae77dc44d66f72197a7cb32bfb1a56eb055f50f"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5272,
+          "bytes": 26,
+          "sha256": "19a3c99dc0ecfc46b5b3b739d989b549bc30f08aa5ebbcda5eef67fbc9a0cf30"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5310,
+          "bytes": 1066,
+          "sha256": "78a675c7841a87c40d54f7f7eb91373e1b8b8a05efc9ffadb23f5faea1b85e38"
+        },
+        {
+          "type": "IEND",
+          "offset": 6388,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              42,
+              44,
+              216,
+              136
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              42,
+              44,
+              216,
+              214
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              42,
+              44,
+              138,
+              214
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG04_apng_poster_separe_320.png",
+    "factor": "Poster IDAT distinct de la boucle, pixels du poster inchangés",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 2446
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 12519,
+    "sha256": "4ea0131e11a83623e6dcbd774adc38382272e18cadb0bd48719f936281e345ab",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "IDAT",
+          "offset": 53,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2495,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2533,
+          "bytes": 2434,
+          "sha256": "0d01148a0a291739ccfbff9684fdd69cf7f63c0cc23423cfd440f3ae8f34c81f"
+        },
+        {
+          "type": "fcTL",
+          "offset": 4979,
+          "bytes": 26,
+          "sha256": "a1474543f6e8e9c6353650a10d3d7f1b18b7265c96bbc62d1e028eb752daaeba"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5017,
+          "bytes": 2468,
+          "sha256": "8753ab44d5b8995ac07c2011242c1d4534f452ff20ddd32e4b012796bd11a871"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7497,
+          "bytes": 26,
+          "sha256": "d644406ddc96dffb3f32ffce40e01815e84a4216cc44df5cb2cab129b9f43490"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7535,
+          "bytes": 2443,
+          "sha256": "8a6d140eaa08d96332b22e37d2312a4bff245dd4f293fc43a5426b41824ef197"
+        },
+        {
+          "type": "fcTL",
+          "offset": 9990,
+          "bytes": 26,
+          "sha256": "5bb47514cb129f715383232103045cd3eaf7f1bc6d2fe96215038b0c813e5bad"
+        },
+        {
+          "type": "fdAT",
+          "offset": 10028,
+          "bytes": 2467,
+          "sha256": "4a1566c2be5bd913dbb0f977f187f15705dee66ffd79bd1ec577e08446cc99a3"
+        },
+        {
+          "type": "IEND",
+          "offset": 12507,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": false,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG05_apng_gfRs_320.png",
+    "factor": "Ajout du bloc privé gfRs",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 4335
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 14408,
+    "sha256": "e4e0dafaeb597ff18bbab9ab2c1314465ef96439f3a996ecfab2a3ea9791d7d2",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2533,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2571,
+          "bytes": 2468,
+          "sha256": "5f68ec0184bacdfb79344bd570e53f55050469ccb382317f007f84888f482100"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5051,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5089,
+          "bytes": 2443,
+          "sha256": "fbf15ca29331b5979cc1ce95e56909e76c3d49a5587b6dd0935eb0566edfd549"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7544,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7582,
+          "bytes": 2467,
+          "sha256": "fd8761d51076646efdd5cfabd8c16f50d94d330fc4b39f256b629e0af500d0e5"
+        },
+        {
+          "type": "gfRs",
+          "offset": 10061,
+          "bytes": 4323,
+          "sha256": "da021043c1148fb34fb37e057b06a066cd4cd3b15db464c73921dd6db8e8bebf"
+        },
+        {
+          "type": "IEND",
+          "offset": 14396,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG06_apng_rgb_320.png",
+    "factor": "Couleur type 2, RGB opaque aux mêmes pixels RGBA normalisés",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": -1042
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 9031,
+    "sha256": "b55abd96a1ce8bd7437d6d05558f69bdea3855ca21900ec4ef17a7bdd33c98a0",
+    "mode": "RGB",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 2,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "2b508cea72e80db16264b9c8b2b7f4d9a1a93302a5d835bb65365671d70cb39c"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2173,
+          "sha256": "595b264f732853fdd1905cb5fa9267025147f9b03979ec9b9695aa06d7266376"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2276,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2314,
+          "bytes": 2204,
+          "sha256": "ee6643e4ff3331dd0dbe6650952dae2586008182fee624d8c2cb1680038b0c6e"
+        },
+        {
+          "type": "fcTL",
+          "offset": 4530,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 4568,
+          "bytes": 2185,
+          "sha256": "716d3687702e74dd051f0764ea7d26220016553f93d40bace82e65ee3e3d976e"
+        },
+        {
+          "type": "fcTL",
+          "offset": 6765,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 6803,
+          "bytes": 2204,
+          "sha256": "e67bf10d95512b4d721b76155dd03a507401f3be39fd6e3d47cfedc8fc5dfd66"
+        },
+        {
+          "type": "IEND",
+          "offset": 9019,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG07_apng_transparent_320.png",
+    "factor": "Même stockage RGBA, petite zone alpha non opaque",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": false,
+      "same_animation": false,
+      "delta_bytes": 30
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 10103,
+    "sha256": "ebc61971e290740d0fae7ce93c1eea94198553c486c2d501ea8fe9c4237210c6",
+    "mode": "RGBA",
+    "poster_sha256": "a0adc9502795b1d1064f20532d2aa00d6448ddd99ea3b6015b535ee0adffdaf9",
+    "poster_alpha": [
+      0,
+      255
+    ],
+    "region_poster_sha256": "a0adc9502795b1d1064f20532d2aa00d6448ddd99ea3b6015b535ee0adffdaf9",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "a0adc9502795b1d1064f20532d2aa00d6448ddd99ea3b6015b535ee0adffdaf9",
+        "region_sha256": null,
+        "alpha": [
+          0,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "6a73297d919fdcc6e07199c84c7742976baa3b8cfd2a65c2bfdf9c815f66fb53",
+        "region_sha256": null,
+        "alpha": [
+          0,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "49a2059d9b4d46b83c02976520a45bda5d2b71c2f0984db8385674b9192e6f90",
+        "region_sha256": null,
+        "alpha": [
+          0,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "36ee91b0f88b0eeb46e0fcfc71a7ab6249005a506e899443bc04931f3a4100ae",
+        "region_sha256": null,
+        "alpha": [
+          0,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2438,
+          "sha256": "711d12aef5f5a6e0948fc0e46de1e68967bfec3cb8ce5279e304be4204e005b1"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2541,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2579,
+          "bytes": 2475,
+          "sha256": "d1700fdc027122dbb9650fed11c18ff034e470fe9f0729eb4b28b24411a6c951"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5066,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5104,
+          "bytes": 2451,
+          "sha256": "69247077f63ca09244ded72d855de5e0c82463e36c32f6413656c0e7c5281a2f"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7567,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7605,
+          "bytes": 2474,
+          "sha256": "66a7c4233df7727ff08f681e5e39ac8d36b401838cd1a27eb6e1164e5cac1e60"
+        },
+        {
+          "type": "IEND",
+          "offset": 10091,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG08_apng_sRGB_320.png",
+    "factor": "Ajout d’une intention sRGB",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 13
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 10086,
+    "sha256": "a99d67adb3390c2662ed800c53d3295d983c022d654d73b59e178aa0046fe02b",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "sRGB",
+          "offset": 33,
+          "bytes": 1,
+          "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+        },
+        {
+          "type": "acTL",
+          "offset": 46,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 66,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 104,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2546,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2584,
+          "bytes": 2468,
+          "sha256": "5f68ec0184bacdfb79344bd570e53f55050469ccb382317f007f84888f482100"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5064,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5102,
+          "bytes": 2443,
+          "sha256": "fbf15ca29331b5979cc1ce95e56909e76c3d49a5587b6dd0935eb0566edfd549"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7557,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7595,
+          "bytes": 2467,
+          "sha256": "fd8761d51076646efdd5cfabd8c16f50d94d330fc4b39f256b629e0af500d0e5"
+        },
+        {
+          "type": "IEND",
+          "offset": 10074,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [
+        "sRGB"
+      ],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG09_apng_ICC_320.png",
+    "factor": "Ajout du profil sRGB explicite iCCP",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 387
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 10460,
+    "sha256": "150544b12250228726da384eb37dce7f6e6f46f046d2c5d057768b5a194697a9",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "iCCP",
+          "offset": 33,
+          "bytes": 375,
+          "sha256": "e1c7009f674196f9aa59e1f00af21066db8251b4b3fb5329bd17d1ad5107c3b1"
+        },
+        {
+          "type": "acTL",
+          "offset": 420,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 440,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 478,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2920,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2958,
+          "bytes": 2468,
+          "sha256": "5f68ec0184bacdfb79344bd570e53f55050469ccb382317f007f84888f482100"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5438,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5476,
+          "bytes": 2443,
+          "sha256": "fbf15ca29331b5979cc1ce95e56909e76c3d49a5587b6dd0935eb0566edfd549"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7931,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7969,
+          "bytes": 2467,
+          "sha256": "fd8761d51076646efdd5cfabd8c16f50d94d330fc4b39f256b629e0af500d0e5"
+        },
+        {
+          "type": "IEND",
+          "offset": 10448,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [
+        "iCCP"
+      ],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "IG10_apng_texte_320.png",
+    "factor": "Ajout d’un bloc texte tEXt",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 42
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 10115,
+    "sha256": "33815b1ce0297645e31afe14ac2ce30950113e95bfdd149027ca901a27c33836",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "tEXt",
+          "offset": 33,
+          "bytes": 30,
+          "sha256": "a7773db8f8ab2ae0e693bfb1bb6f4ee5a06babc34d4034af30631fca73b41110"
+        },
+        {
+          "type": "acTL",
+          "offset": 75,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 95,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 133,
+          "bytes": 2430,
+          "sha256": "6656cc5af2501b865f51161647f9ae9399712c0a6cd853368c40ae8b0400cec3"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2575,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2613,
+          "bytes": 2468,
+          "sha256": "5f68ec0184bacdfb79344bd570e53f55050469ccb382317f007f84888f482100"
+        },
+        {
+          "type": "fcTL",
+          "offset": 5093,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 5131,
+          "bytes": 2443,
+          "sha256": "fbf15ca29331b5979cc1ce95e56909e76c3d49a5587b6dd0935eb0566edfd549"
+        },
+        {
+          "type": "fcTL",
+          "offset": 7586,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 7624,
+          "bytes": 2467,
+          "sha256": "fd8761d51076646efdd5cfabd8c16f50d94d330fc4b39f256b629e0af500d0e5"
+        },
+        {
+          "type": "IEND",
+          "offset": 10103,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": [
+        "tEXt"
+      ]
+    }
+  },
+  {
+    "file": "IG11_apng_poids_320.png",
+    "factor": "Compression zlib niveau 1, pixels et types de blocs conservés",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": 16472
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 26545,
+    "sha256": "c7839e97233d03008809900ef6c5a568d06661f8b18a2bc1db383eabb9f2207e",
+    "mode": "RGBA",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "8f089cbf06387962ed1220af11def5c046b72c256541632651268c0c6e245ef7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 6545,
+          "sha256": "1cd5802bc65ce02a7121c08b49b4ddeb878f9fed25396be81a014d3d051534c2"
+        },
+        {
+          "type": "fcTL",
+          "offset": 6648,
+          "bytes": 26,
+          "sha256": "fc495ea9efdd97ee5288fa759bbd714d170ed4afc35d017f5817c3aa26992185"
+        },
+        {
+          "type": "fdAT",
+          "offset": 6686,
+          "bytes": 6591,
+          "sha256": "5266e0a2079d88ed3c4def79d4acb864b7c0a2d907ec389cb13033f6982e69b1"
+        },
+        {
+          "type": "fcTL",
+          "offset": 13289,
+          "bytes": 26,
+          "sha256": "556a62382207ffa4a5c1e33bbd4a27126ac718ab48940a61e2dabfd75a1f493f"
+        },
+        {
+          "type": "fdAT",
+          "offset": 13327,
+          "bytes": 6555,
+          "sha256": "f0f3e8136e32a4def57c7ca4aef8bbd0e4f09ec5e7a4f9bea8987d585426cee8"
+        },
+        {
+          "type": "fcTL",
+          "offset": 19894,
+          "bytes": 26,
+          "sha256": "258c9d1754fa90dc5e01b15126cd585e2ee438a1bc63bbd2412931a27fbcdaf2"
+        },
+        {
+          "type": "fdAT",
+          "offset": 19932,
+          "bytes": 6589,
+          "sha256": "dc039dbd9c48523164590358917630980da284d9cc9e8507986af9804dbfee99"
+        },
+        {
+          "type": "IEND",
+          "offset": 26533,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "LI01_statique_400.png",
+    "factor": "Témoin fixe à 400 px",
+    "reference": "LI02_apng_400.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": false,
+      "delta_bytes": -74184
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      400,
+      400
+    ],
+    "bytes": 24193,
+    "sha256": "17a40b20e5d418de98b1ad5208fd601d90c69107e950c3f3fc5baaa7b8d1d355",
+    "mode": "RGBA",
+    "poster_sha256": "9ab575343fdd31150ab99f67683dc5781ee7157b3589d5f78c1412cc14a0ed85",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "9ab575343fdd31150ab99f67683dc5781ee7157b3589d5f78c1412cc14a0ed85",
+    "region_size": [
+      400,
+      400
+    ],
+    "animation_frames": 0,
+    "distinct_animation_frames": 0,
+    "plays": null,
+    "frames": [],
+    "png": {
+      "width": 400,
+      "height": 400,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "e451ee1b5721046adb29ef13f64aec5350a6f25a45addacba1b480afad5c76b7"
+        },
+        {
+          "type": "IDAT",
+          "offset": 33,
+          "bytes": 24136,
+          "sha256": "a8ea684b4b10f97cce4b0971d209672699dd5d7002b2ee6e58d9b61209e19aed"
+        },
+        {
+          "type": "IEND",
+          "offset": 24181,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": null,
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "LI02_apng_400.png",
+    "factor": "Même séquence à 400 px",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": false,
+      "same_animation": false,
+      "delta_bytes": 88304
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      400,
+      400
+    ],
+    "bytes": 98377,
+    "sha256": "4a458f5a6245299b1e95ad297946fc1740202230674b584fabb5be58bb2f43e7",
+    "mode": "RGBA",
+    "poster_sha256": "9ab575343fdd31150ab99f67683dc5781ee7157b3589d5f78c1412cc14a0ed85",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "9ab575343fdd31150ab99f67683dc5781ee7157b3589d5f78c1412cc14a0ed85",
+    "region_size": [
+      400,
+      400
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "9ab575343fdd31150ab99f67683dc5781ee7157b3589d5f78c1412cc14a0ed85",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "e81e85904e9e4e2ee00eac1bf917a0e28b5438ec5afee964c782082dc2d8c566",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "99781cb6c96cd68331eb11ec11ae96dbc0f72ea090d535ca9eb4d3ebed49a21e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "273c29be6054ed02243804241126a95bccb933bbd1ac884fbe4ed82c0e883ecf",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 400,
+      "height": 400,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "e451ee1b5721046adb29ef13f64aec5350a6f25a45addacba1b480afad5c76b7"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "2d813ba9806fcb81932535434306432346631ce797a56cd16a333b2f33484a6c"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 24136,
+          "sha256": "a8ea684b4b10f97cce4b0971d209672699dd5d7002b2ee6e58d9b61209e19aed"
+        },
+        {
+          "type": "fcTL",
+          "offset": 24239,
+          "bytes": 26,
+          "sha256": "6640233e108321d87dfe6ca06b605a81921ba6edde91532e64f7a5f4ad6f9795"
+        },
+        {
+          "type": "fdAT",
+          "offset": 24277,
+          "bytes": 24760,
+          "sha256": "89ad442a9a8e99ce46e6f06018a0621051fd9499d91d4a0065acbc4ea041e94a"
+        },
+        {
+          "type": "fcTL",
+          "offset": 49049,
+          "bytes": 26,
+          "sha256": "68281865d53bef4e2a5953da381349e213bf1672b33655ddf8c8f30197cad7fa"
+        },
+        {
+          "type": "fdAT",
+          "offset": 49087,
+          "bytes": 24376,
+          "sha256": "288a6357975179e59a5393412e86e497eae2f82681e5823d9a02d53519c537ae"
+        },
+        {
+          "type": "fcTL",
+          "offset": 73475,
+          "bytes": 26,
+          "sha256": "4f330cd7f80952a52d52f9b78eb41b53626305cd3983ade7c734c14fe64c0f21"
+        },
+        {
+          "type": "fdAT",
+          "offset": 73513,
+          "bytes": 24840,
+          "sha256": "fef9abf4765ea6978ad77d2c374b1baf62081a58ec0fe19e92309a530c6bb1b6"
+        },
+        {
+          "type": "IEND",
+          "offset": 98365,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              400,
+              400
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              400,
+              400
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              400,
+              400
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              400,
+              400
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "LI03_statique_512.png",
+    "factor": "Témoin fixe à 512 px",
+    "reference": "LI04_apng_512.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": false,
+      "delta_bytes": -125233
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 41390,
+    "sha256": "eb77328e790608eacc03827cecd29f750f37fb2056358d81e0d9adf7df8536f8",
+    "mode": "RGBA",
+    "poster_sha256": "54542ac197a6530ddfc395b3bd0ee8b8f7c4e23a1b67c9cccbf4c30c5df3b677",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "54542ac197a6530ddfc395b3bd0ee8b8f7c4e23a1b67c9cccbf4c30c5df3b677",
+    "region_size": [
+      512,
+      512
+    ],
+    "animation_frames": 0,
+    "distinct_animation_frames": 0,
+    "plays": null,
+    "frames": [],
+    "png": {
+      "width": 512,
+      "height": 512,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "0af698aafec7bd9acfd93499e57c740f32a936c4df8e3e76962bb900d701cc20"
+        },
+        {
+          "type": "IDAT",
+          "offset": 33,
+          "bytes": 41333,
+          "sha256": "068d7fc350235ba67b2fa79955c6bb045020ebe79a53d85344c46154960801c1"
+        },
+        {
+          "type": "IEND",
+          "offset": 41378,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": null,
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "LI04_apng_512.png",
+    "factor": "Même séquence à 512 px",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": false,
+      "same_animation": false,
+      "delta_bytes": 156550
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 166623,
+    "sha256": "a1a80a8438eb8013b4d8d973784781b8b2bda2606bafa5dae7c2689aba790868",
+    "mode": "RGBA",
+    "poster_sha256": "54542ac197a6530ddfc395b3bd0ee8b8f7c4e23a1b67c9cccbf4c30c5df3b677",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "54542ac197a6530ddfc395b3bd0ee8b8f7c4e23a1b67c9cccbf4c30c5df3b677",
+    "region_size": [
+      512,
+      512
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "54542ac197a6530ddfc395b3bd0ee8b8f7c4e23a1b67c9cccbf4c30c5df3b677",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d5e4808cb916d2c6fe66dd9c7243d8d296eb39c0f87e8d874dafeada4229114b",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "fddc956100d0fb4a5ce2238391f0876a8590835eeba4281c7993971d88b993eb",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "f3e4dae1ba9cd55d42da50e59164bc8cc12471991f40a1264dcf8ddd711ba704",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 512,
+      "height": 512,
+      "bit_depth": 8,
+      "color_type": 6,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "0af698aafec7bd9acfd93499e57c740f32a936c4df8e3e76962bb900d701cc20"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "07afcc6390b7b9916a18113f7e3d61f49144c8f563e3eee33485a98bdafac91f"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 41333,
+          "sha256": "068d7fc350235ba67b2fa79955c6bb045020ebe79a53d85344c46154960801c1"
+        },
+        {
+          "type": "fcTL",
+          "offset": 41436,
+          "bytes": 26,
+          "sha256": "80b3c17a2dcfdf97d153e3510fc728788d09063c2aedc0a8a7495ec9ee630995"
+        },
+        {
+          "type": "fdAT",
+          "offset": 41474,
+          "bytes": 41725,
+          "sha256": "d7a518eed5857ec6a991a3805232a2b5d33fc1de04da20fe9411a2fc4d8e645c"
+        },
+        {
+          "type": "fcTL",
+          "offset": 83211,
+          "bytes": 26,
+          "sha256": "aa14ac5cc35e8211cfb31dc47dd36e00e52b8c9e3b59addc32ef74c9cd7d2294"
+        },
+        {
+          "type": "fdAT",
+          "offset": 83249,
+          "bytes": 41768,
+          "sha256": "8fd0251ecbad703e71ec2ba7a17173527ced2329d623f721d7e7aa1b4bc94181"
+        },
+        {
+          "type": "fcTL",
+          "offset": 125029,
+          "bytes": 26,
+          "sha256": "e19a3d8097bcc38dc2b8c903bf1de9a7b2b9b53a2f47ae42b22a901c0edf018b"
+        },
+        {
+          "type": "fdAT",
+          "offset": 125067,
+          "bytes": 41532,
+          "sha256": "e000094653890af2cea6b42df9ec91236f2c9697ed9e276dd2b582a6c554eedd"
+        },
+        {
+          "type": "IEND",
+          "offset": 166611,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  },
+  {
+    "file": "N01_apng_rgb_rectangles_320.png",
+    "factor": "Candidat combiné RGB + rectangles",
+    "reference": "IG02_apng_rgba_320.png",
+    "comparison": {
+      "same_poster_pixels": true,
+      "same_animation": true,
+      "delta_bytes": -4092
+    },
+    "format": "PNG",
+    "mime_from_bytes": "image/png",
+    "dimensions": [
+      320,
+      320
+    ],
+    "bytes": 5981,
+    "sha256": "934064c13f04b756110bd13cadeecb2d67815f6a3b2b9bc2d1e78fa96891be50",
+    "mode": "RGB",
+    "poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "poster_alpha": [
+      255,
+      255
+    ],
+    "region_poster_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+    "region_size": [
+      320,
+      320
+    ],
+    "animation_frames": 4,
+    "distinct_animation_frames": 4,
+    "plays": 0,
+    "frames": [
+      {
+        "rgba_sha256": "88b61e0958eaf8b1b8164fe5030e806377f672ef53f47b2972410077fba2cd01",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "b9b2fca7344155d3bfeefb1497dced5765f02ec24cc6f48a4de523e003d3556e",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "d9359dc2369a488a18430b4cd7fc190d79476fa580236a7a1c942d351ec729e2",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      },
+      {
+        "rgba_sha256": "27c410495bde35b08cd1615a83003649cbd4490deecbd8e684c55b8218791508",
+        "region_sha256": null,
+        "alpha": [
+          255,
+          255
+        ],
+        "delay_ms": 350.0
+      }
+    ],
+    "png": {
+      "width": 320,
+      "height": 320,
+      "bit_depth": 8,
+      "color_type": 2,
+      "interlace": 0,
+      "chunks": [
+        {
+          "type": "IHDR",
+          "offset": 8,
+          "bytes": 13,
+          "sha256": "2b508cea72e80db16264b9c8b2b7f4d9a1a93302a5d835bb65365671d70cb39c"
+        },
+        {
+          "type": "acTL",
+          "offset": 33,
+          "bytes": 8,
+          "sha256": "525c3368aba80a606f181bd81ae58ae0cff8a52d05b47ddc01c0c3d1273397e4"
+        },
+        {
+          "type": "fcTL",
+          "offset": 53,
+          "bytes": 26,
+          "sha256": "cebc1ba2a8de0cb2608a0810baf6e4286d65455f3804795711e6e470854a7887"
+        },
+        {
+          "type": "IDAT",
+          "offset": 91,
+          "bytes": 2173,
+          "sha256": "595b264f732853fdd1905cb5fa9267025147f9b03979ec9b9695aa06d7266376"
+        },
+        {
+          "type": "fcTL",
+          "offset": 2276,
+          "bytes": 26,
+          "sha256": "c50ad0a8ae6ba0f8a3b12310ec3ed941509ce3d10723370d04d025f54f7f2223"
+        },
+        {
+          "type": "fdAT",
+          "offset": 2314,
+          "bytes": 970,
+          "sha256": "c6e785b95e7dff361ff6457f30dcd9da874438753433644b87037d038a521dc5"
+        },
+        {
+          "type": "fcTL",
+          "offset": 3296,
+          "bytes": 26,
+          "sha256": "30d99b2e1365076e7a597d80ec39393f7e78c9fd605032b42cc4a493e683c0c0"
+        },
+        {
+          "type": "fdAT",
+          "offset": 3334,
+          "bytes": 1539,
+          "sha256": "e052b202a7269353082f16224c346bd0c3afb06c6994387a3a3f1b3d392a823b"
+        },
+        {
+          "type": "fcTL",
+          "offset": 4885,
+          "bytes": 26,
+          "sha256": "19a3c99dc0ecfc46b5b3b739d989b549bc30f08aa5ebbcda5eef67fbc9a0cf30"
+        },
+        {
+          "type": "fdAT",
+          "offset": 4923,
+          "bytes": 1034,
+          "sha256": "3267d013ca07126339100d62633ce05aab2477f25206ac8e7769c44750d6d09a"
+        },
+        {
+          "type": "IEND",
+          "offset": 5969,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "animation": {
+        "plays": 0,
+        "default_in_animation": true,
+        "frames": [
+          {
+            "rect": [
+              0,
+              0,
+              320,
+              320
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": true
+          },
+          {
+            "rect": [
+              42,
+              44,
+              216,
+              136
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              42,
+              44,
+              216,
+              214
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          },
+          {
+            "rect": [
+              42,
+              44,
+              138,
+              214
+            ],
+            "delay": [
+              350,
+              1000
+            ],
+            "dispose": 0,
+            "blend": 0,
+            "uses_idat": false
+          }
+        ]
+      },
+      "color_blocks": [],
+      "metadata_blocks": []
+    }
+  }
+]

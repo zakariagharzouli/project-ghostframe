@@ -108,49 +108,56 @@ def serialize(stream):
     return blob
 
 
-def compressed_pixels(width, height, rgba):
+def compressed_pixels(width, height, rgba, *, rgb=False, level=9):
     if rgba_length(width, height) != len(rgba):
         raise ValueError("Taille du raster incohérente")
-    stride = width * 4
-    rows = (b"\x00" + rgba[offset:offset + stride] for offset in range(0, len(rgba), stride))
-    return zlib.compress(b"".join(rows), level=9)
+    if rgb and rgba[3::4].count(255) != width * height:
+        raise ValueError("Le mode RGB exige des pixels opaques")
+    pixels = Image.frombytes("RGBA", (width, height), rgba).convert("RGB").tobytes() if rgb else rgba
+    stride = width * (3 if rgb else 4)
+    rows = (b"\x00" + pixels[offset:offset + stride] for offset in range(0, len(pixels), stride))
+    return zlib.compress(b"".join(rows), level=level)
 
 
-def header(width, height):
-    return b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)
+def header(width, height, *, rgb=False):
+    return b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 2 if rgb else 6, 0, 0, 0)
 
 
-def static_png(width, height, rgba):
-    return serialize([header(width, height), (b"IDAT", compressed_pixels(width, height, rgba)), (b"IEND", b"")])
+def static_png(width, height, rgba, *, rgb=False):
+    return serialize([
+        header(width, height, rgb=rgb), (b"IDAT", compressed_pixels(width, height, rgba, rgb=rgb)), (b"IEND", b""),
+    ])
 
 
-def frame_region(width, height, frame, previous, full_pixels):
+def frame_region(width, height, frame, previous, full_pixels, *, rgb, level):
     current = Image.frombytes("RGBA", (width, height), frame)
     prior = Image.frombytes("RGBA", (width, height), previous)
     box = ImageChops.difference(current, prior).getbbox(alpha_only=False)
     left, top, right, bottom = box or (0, 0, 1, 1)
     cropped_width, cropped_height = right - left, bottom - top
     if (cropped_width, cropped_height) != (width, height):
-        compressed = compressed_pixels(cropped_width, cropped_height, current.crop((left, top, right, bottom)).tobytes())
+        compressed = compressed_pixels(cropped_width, cropped_height, current.crop((left, top, right, bottom)).tobytes(),
+                                       rgb=rgb, level=level)
         if len(compressed) < len(full_pixels):
             return cropped_width, cropped_height, left, top, compressed
     return width, height, 0, 0, full_pixels
 
 
-def apng(motion, poster=None, archive=False, sparse=False):
+def apng(motion, poster=None, archive=False, sparse=False, *, rgb=False, level=9):
     """Use a separate default image when poster is supplied."""
     width, height = motion.width, motion.height
-    stream = [header(width, height), (b"acTL", struct.pack(">II", len(motion.frames), motion.plays))]
+    stream = [header(width, height, rgb=rgb), (b"acTL", struct.pack(">II", len(motion.frames), motion.plays))]
     if poster is not None:
-        stream.append((b"IDAT", compressed_pixels(width, height, poster)))
+        stream.append((b"IDAT", compressed_pixels(width, height, poster, rgb=rgb, level=level)))
 
     sequence = 0
     previous = None
     for index, (frame, delay) in enumerate(zip(motion.frames, motion.delays, strict=True)):
         region_width, region_height, x, y = width, height, 0, 0
-        pixels = compressed_pixels(width, height, frame)
+        pixels = compressed_pixels(width, height, frame, rgb=rgb, level=level)
         if sparse and previous is not None:
-            region_width, region_height, x, y, pixels = frame_region(width, height, frame, previous, pixels)
+            region_width, region_height, x, y, pixels = frame_region(width, height, frame, previous, pixels,
+                                                                   rgb=rgb, level=level)
         control = struct.pack(">IIIIIHHBB", sequence, region_width, region_height, x, y, delay, 1000, 0, 0)
         stream.append((b"fcTL", control))
         sequence += 1

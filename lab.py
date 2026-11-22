@@ -138,7 +138,9 @@ def test_page(probes):
         if surface == "canvas":
             element = f'<canvas {common} width="96" height="64" data-src="{url}"></canvas>'
         elif surface == "img":
-            element = f'<img {common} src="{url}" alt="" width="96" height="64">'
+            x, y = probe.get("source_offset", (0, 0))
+            position = f' style="object-position:{-x}px {-y}px"' if x or y else ""
+            element = f'<img {common}{position} src="{url}" alt="" width="96" height="64">'
         else:
             element = f'<div {common} style="background-image:url({url})"></div>'
         cards.append(f"<section><h2>{html.escape(name)}</h2>{element}</section>")
@@ -182,9 +184,6 @@ def local_lab(extra_transforms=None):
             if not self.path.startswith("/upload/") or (profile not in PROFILES and profile not in extra_transforms):
                 self.send_error(404)
                 return
-            if not self.headers.get("Content-Type") or self.headers.get_content_type() != "image/png":
-                self.send_error(415)
-                return
             try:
                 length = int(self.headers.get("Content-Length", "0"))
                 if not 0 < length <= gf.MAX_FILE:
@@ -193,6 +192,9 @@ def local_lab(extra_transforms=None):
                 incoming = self.rfile.read(length)
                 if len(incoming) != length:
                     raise ValueError("Corps HTTP incomplet")
+                if not self.headers.get("Content-Type") or self.headers.get_content_type() != "image/png":
+                    self.send_error(415)
+                    return
                 if profile in extra_transforms:
                     gf.decoded_png(incoming)
                     rendered, suffix, mime = extra_transforms[profile](incoming)

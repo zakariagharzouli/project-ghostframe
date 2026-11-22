@@ -1,0 +1,11 @@
+﻿fichier;référence;facteur;octets;dimensions;trames;provenance;import;aperçu_après_import;sha256_ressource_servie;mime_ressource;trames_ressource;rendu_client;version_client;message_observé;date
+A_png_statique_320.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+B_apng_standard_320.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+C_png_statique_512.png;;;;;;observation manuelle utilisateur;accepté;;;;;fixe;;;
+IG01_statique_IDAT_320.png;IG02_apng_rgba_320.png;Trames retirées, IHDR et IDAT conservés;2487;320x320;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG02_apng_rgba_320.png;;APNG témoin, poster inclus, RGBA opaque;10073;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI01_statique_400.png;LI02_apng_400.png;Témoin fixe à 400 px;24193;400x400;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI02_apng_400.png;IG02_apng_rgba_320.png;Même séquence à 400 px;98377;400x400;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI03_statique_512.png;LI04_apng_512.png;Témoin fixe à 512 px;41390;512x512;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
+LI04_apng_512.png;IG02_apng_rgba_320.png;Même séquence à 512 px;166623;512x512;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+N01_apng_rgb_rectangles_320.png;IG02_apng_rgba_320.png;Candidat combiné RGB + rectangles;5981;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;

@@ -1,0 +1,14 @@
+﻿fichier;référence;facteur;octets;dimensions;trames;provenance;import;aperçu_après_import;sha256_ressource_servie;mime_ressource;trames_ressource;rendu_client;version_client;message_observé;date
+Residual_Labs_Ghostframe_V1_Instagram.png;;;;;;observation manuelle utilisateur;refusé;;;;;;;;
+IG01_statique_IDAT_320.png;IG02_apng_rgba_320.png;Trames retirées, IHDR et IDAT conservés;2487;320x320;0;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG02_apng_rgba_320.png;;APNG témoin, poster inclus, RGBA opaque;10073;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG03_apng_rectangles_320.png;IG02_apng_rgba_320.png;Rectangles fcTL avec les mêmes pixels décodés;6400;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG04_apng_poster_separe_320.png;IG02_apng_rgba_320.png;Poster IDAT distinct de la boucle, pixels du poster inchangés;12519;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG05_apng_gfRs_320.png;IG02_apng_rgba_320.png;Ajout du bloc privé gfRs;14408;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG06_apng_rgb_320.png;IG02_apng_rgba_320.png;Couleur type 2, RGB opaque aux mêmes pixels RGBA normalisés;9031;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG07_apng_transparent_320.png;IG02_apng_rgba_320.png;Même stockage RGBA, petite zone alpha non opaque;10103;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG08_apng_sRGB_320.png;IG02_apng_rgba_320.png;Ajout d’une intention sRGB;10086;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG09_apng_ICC_320.png;IG02_apng_rgba_320.png;Ajout du profil sRGB explicite iCCP;10460;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG10_apng_texte_320.png;IG02_apng_rgba_320.png;Ajout d’un bloc texte tEXt;10115;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+IG11_apng_poids_320.png;IG02_apng_rgba_320.png;Compression zlib niveau 1, pixels et types de blocs conservés;26545;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
+N01_apng_rgb_rectangles_320.png;IG02_apng_rgba_320.png;Candidat combiné RGB + rectangles;5981;320x320;4;généré, non essayé sur la plateforme;non testé;;;;;;;;
