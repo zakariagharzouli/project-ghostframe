@@ -194,7 +194,26 @@ const Ghostframe = (() => {
     };
   }
 
-  function readTile(luma, width, height, y, a, b) {
+  function nearest(luma, width, x, y) {
+    return luma[Math.floor(y) * width + Math.floor(x)];
+  }
+
+  function bilinear(luma, width, x, y) {
+    const column = Math.floor(x - .5);
+    const row = Math.floor(y - .5);
+    if (column < 0 || column + 1 >= width || row < 0 || (row + 2) * width > luma.length) {
+      return nearest(luma, width, x, y);
+    }
+    const dx = x - .5 - column;
+    const dy = y - .5 - row;
+    const first = row * width + column;
+    const next = first + width;
+    const upper = (1 - dx) * luma[first] + dx * luma[first + 1];
+    const lower = (1 - dx) * luma[next] + dx * luma[next + 1];
+    return (1 - dy) * upper + dy * lower;
+  }
+
+  function readTile(luma, width, height, y, a, b, sample) {
     const sx = (b.center - a.center) / 54;
     if (sx < MIN_MODULE || sx > MAX_MODULE || [a.width, b.width].some((w) => Math.abs(w - 2 * sx) > 2.2)) return null;
     const row = y * width;
@@ -211,17 +230,17 @@ const Ghostframe = (() => {
     // when the image was stretched or the finder edge was rounded by resampling.
     const estimate = Math.round((bottom - top) / sx - 4);
     const preferred = Math.max(MIN_ROWS, Math.min(MAX_ROWS, estimate));
-    const direct = sampleRows(luma, width, y, x0, top, bottom, sx, preferred);
+    const direct = sampleRows(luma, width, y, x0, top, bottom, sx, preferred, sample);
     if (direct) return direct;
     for (let rows = MIN_ROWS; rows <= MAX_ROWS; rows += 1) {
       if (rows === preferred) continue;
-      const tile = sampleRows(luma, width, y, x0, top, bottom, sx, rows);
+      const tile = sampleRows(luma, width, y, x0, top, bottom, sx, rows, sample);
       if (tile) return tile;
     }
     return null;
   }
 
-  function sampleRows(luma, width, y, x0, top, bottom, sx, rows) {
+  function sampleRows(luma, width, y, x0, top, bottom, sx, rows, sample) {
     const sy = (bottom - top) / (rows + 4);
     if (sy < MIN_MODULE || sy > MAX_MODULE || sx / sy < .66 || sx / sy > 1.5) return null;
     // The footer is the only empty scanline crossed by both bars.
@@ -230,11 +249,11 @@ const Ghostframe = (() => {
     const packet = new Uint8Array(rows * BYTES_PER_ROW);
     const header = viewOf(packet);
     for (let yy = 0; yy < rows; yy += 1) {
-      const row = Math.floor(y0 + (yy + 3.5) * sy) * width;
+      const line = y0 + (yy + 3.5) * sy;
       for (let xx = 0; xx < COLS; xx += 1) {
-        const sample = Math.floor(x0 + (xx + 5.5) * sx);
+        const column = x0 + (xx + 5.5) * sx;
         const bit = yy * COLS + xx;
-        if (luma[row + sample] < 128) packet[bit >>> 3] |= 128 >>> (bit & 7);
+        if (sample(luma, width, column, line) < 128) packet[bit >>> 3] |= 128 >>> (bit & 7);
       }
       if (yy === 0) {
         const magic = header.getUint32(0);
@@ -305,16 +324,17 @@ const Ghostframe = (() => {
     return { ...decoded, crop, left, top, sx, sy, recoveredTile: missing, validTiles: group.size };
   }
 
-  function scan({ data, width, height }, top = 0) {
+  function scan({ data, width, height }, top = 0, { interpolate = false } = {}) {
     const luma = new Uint8Array(width * height);
     for (let i = 0, pixel = 0; pixel < luma.length; i += 4, pixel += 1) {
       luma[pixel] = (54 * data[i] + 183 * data[i + 1] + 19 * data[i + 2]) >>> 8;
     }
     const groups = new Map();
+    const sample = interpolate ? bilinear : nearest;
     for (let y = height - 1; y >= Math.max(0, height - SCAN_DEPTH); y -= 2) {
       const marks = runs(luma, width, y);
       for (let index = 1; index < marks.length; index += 1) {
-        const tile = readTile(luma, width, height, y, marks[index - 1], marks[index]);
+        const tile = readTile(luma, width, height, y, marks[index - 1], marks[index], sample);
         if (!tile) continue;
         tile.y0 += top;
         const key = `${tile.magic}/${tile.identity}/${tile.length}`;

@@ -19,7 +19,7 @@ function render({ width, height, steps }) {
     payload: Buffer.from(payload).toString('base64') };
 }
 
-function read({ width, height, top, raster }) {
+function read({ width, height, top, raster, interpolate = false }) {
   const gray = Buffer.from(raster, 'base64');
   const data = new Uint8ClampedArray(gray.length * 4);
   for (let i = 0; i < gray.length; i += 1) {
@@ -27,7 +27,7 @@ function read({ width, height, top, raster }) {
     data[position] = data[position + 1] = data[position + 2] = gray[i];
     data[position + 3] = 255;
   }
-  const result = Ghostframe.scan({ data, width, height }, top);
+  const result = Ghostframe.scan({ data, width, height }, top, { interpolate });
   if (!result) return null;
   const payload = Ghostframe.serialize(result.width, result.height, result.steps);
   return { ...result, payload: Buffer.from(payload).toString('base64') };

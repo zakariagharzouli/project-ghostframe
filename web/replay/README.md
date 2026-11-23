@@ -57,6 +57,8 @@ Pour chaque succès, le test vérifie l’ordre, la fidélité des notes et des 
 
 Le [banc à surface égale](benchmark.md) compare aussi GFS2 à des QR et rMQR fragmentés sur les mêmes captures et données.
 
+La [validation sur ScreenSpot-Pro](holdout.md) teste des captures issues d’un corpus public, une chaîne OpenCV et un témoin Data Matrix rectangulaire.
+
 L’exemple contient 84 octets d’étapes. Sa bande passe de 88 à 56 px et son export JPEG de **69 782 à 65 985 octets** dans le même Chromium, avec les mêmes réglages d’export. La hauteur de la bande diminue de 36 %. Le JPEG complet diminue de 5,4 %.
 
 Le lecteur actuel a récupéré les mêmes trois étapes dans **31 des 32 transformations de chaque format**. La matrice croise quatre échelles (63, 50, 45 et 40 %), quatre qualités JPEG (85, 65, 45 et 30) et deux cadrages (intact ou 328 px coupés à gauche et 32 px en haut avant réduction). Le cas combinant le recadrage, 40 % et la qualité 30 échoue pour les deux formats. Ce comparatif s’applique à l’exemple, avec un lecteur identique pour les deux formats.

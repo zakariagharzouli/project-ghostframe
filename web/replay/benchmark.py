@@ -28,6 +28,7 @@ FORMATS = {
     "qr": (zx.BarcodeFormat.QRCode, "LMQH", range(1, 9)),
     "rmqr": (zx.BarcodeFormat.RMQRCode, "MH", range(1, 33)),
 }
+QUIET_ZONES = {"qr": 4, "rmqr": 2, "dmre": 1}
 
 
 class Codec:
@@ -85,15 +86,16 @@ class Layout:
 
 
 def raster_symbol(packet, fmt, ecc, variant):
-    barcode = zx.create_barcode(packet, fmt, version=variant, ec_level=ecc)
-    if barcode.ec_level != ecc:
+    options = {} if ecc is None else {"ec_level": ecc}
+    barcode = zx.create_barcode(packet, fmt, version=variant, **options)
+    if ecc is not None and barcode.ec_level != ecc:
         raise ValueError(f"Requested ECC {ecc}, got {barcode.ec_level}")
     return np.asarray(zx.write_barcode_to_image(barcode))
 
 
-def qr_layouts(payload, width, body_height, band_height, strip_width):
+def qr_layouts(payload, width, body_height, band_height, strip_width, formats=FORMATS):
     offset = (width - strip_width) // 2
-    for family, (fmt, levels, versions) in FORMATS.items():
+    for family, (fmt, levels, versions) in formats.items():
         for count in (2, 3, 5):
             packets = fragment(payload, count)
             slot_width = strip_width // len(packets)
@@ -102,18 +104,21 @@ def qr_layouts(payload, width, body_height, band_height, strip_width):
                 for variant in versions:
                     try:
                         h, w = raster_symbol(packets[0], fmt, ecc, variant).shape
+                        scale = min(band_height // h, slot_width // w)
+                        if not scale:
+                            continue
+                        if any(raster_symbol(packet, fmt, ecc, variant).shape != (h, w) for packet in packets[1:]):
+                            continue
                     except (ValueError, RuntimeError):
                         continue
-                    scale = min(band_height // h, slot_width // w)
-                    if scale:
-                        choices.append((scale, h * w, -variant, h, w))
+                    choices.append((scale, h * w, -variant, h, w))
                 if not choices:
                     continue
                 largest = max(choices)
                 smallest = min(choice for choice in choices if choice[0] == largest[0])
                 for scale, _, chosen, h, w in sorted({smallest, largest}):
                     variant = -chosen
-                    quiet = (4 if family == "qr" else 2) * scale
+                    quiet = QUIET_ZONES[family] * scale
                     strip = Image.new("L", (width, band_height), 255)
                     corners = []
                     for index, packet in enumerate(packets):
@@ -128,7 +133,7 @@ def qr_layouts(payload, width, body_height, band_height, strip_width):
                         x0, x1 = left + quiet, left + pixels.width - quiet
                         y0, y1 = body_height + top + quiet, body_height + top + pixels.height - quiet
                         corners.append(((x0, y0), (x1, y0), (x1, y1), (x0, y1)))
-                    yield Layout(f"{family}-{count}-{ecc}-v{variant}-{scale}px", fmt, scale, strip, tuple(corners))
+                    yield Layout(f"{family}-{count}-{ecc or 'ECC200'}-v{variant}-{scale}px", fmt, scale, strip, tuple(corners))
 
 
 def decode_fragments(symbols):
@@ -278,9 +283,10 @@ def click_error(geometry, steps, image_size, box):
     return round(max(distances), 5) if distances else None
 
 
-def ghost_result(codec, data, payload, steps, box):
+def ghost_result(codec, data, payload, steps, box, *, interpolate=False):
     size, top, strip = data
-    result = codec.call("read", width=strip.width, height=strip.height, top=top, raster=ascii_packet(strip.tobytes()))
+    result = codec.call("read", width=strip.width, height=strip.height, top=top, raster=ascii_packet(strip.tobytes()),
+                        interpolate=interpolate)
     if not result:
         return None
     if binary(result["payload"]) != payload:
@@ -344,49 +350,22 @@ def score(errors):
 def main(output, resampler):
     result = {"resampler": resampler,
               "versions": {name: version(name) for name in ("Pillow", "numpy", "zxing-cpp")}, "fixtures": []}
-    resample = RESAMPLERS[resampler]
+    def render_case(source, box, percent, quality, gray):
+        return transform(source, box, percent, quality, gray, RESAMPLERS[resampler])
+    run_benchmark(output, result, fixtures(), carrier, render_case, cases, FORMATS)
+
+
+def run_benchmark(output, result, samples, encode_carrier, render_case, get_cases, formats, *, retry_bilinear=False):
     with Codec() as codec:
-        for name, poster, steps in fixtures():
-            w, h = poster.size
-            encoded = codec.call("render", width=w, height=h, steps=steps)
-            payload = binary(encoded["payload"])
-            height, width = encoded["rows"], encoded["stripWidth"]
-            band = Image.frombytes("L", (w, height), binary(encoded["band"]))
-            ours = carrier(poster, band)
-            layouts = tuple((layout, carrier(poster, layout.strip))
-                            for layout in qr_layouts(payload, w, h, height, width))
-            assert {layout.key.split("-")[0] for layout, _ in layouts} == set(FORMATS)
-            fixture = {"name": name, "payload_bytes": len(payload), "band": [width, height],
-                       "jpeg_bytes": {"ghostframe": len(ours), **{layout.key: len(data) for layout, data in layouts}},
-                       "cases": []}
-            for label, box, pct, quality, gray in cases(w, h + height, (w - width) // 2):
-                args = (box, pct, quality, gray, resample)
-                measurements = {"ghostframe": ghost_result(codec, transform(ours, *args), payload, steps, box)}
-                guided = {}
-                for layout, image in layouts:
-                    sample = transform(image, *args)
-                    measurements[layout.key] = qr_result(layout, sample, payload, steps, box)
-                    reads = known_grid_qr(layout, sample, box)
-                    if any(read != payload for read in reads):
-                        raise AssertionError(f"{layout.key} read an unexpected payload from the known grid")
-                    guided[layout.key] = bool(reads)
-                if label == "original92":
-                    assert measurements["ghostframe"] is not None
-                    for family in FORMATS:
-                        assert any(k.startswith(family + "-") and v is not None for k, v in measurements.items())
-                        assert any(k.startswith(family + "-") and v for k, v in guided.items())
-                assert label != "sans-bande" or all(value is None for value in measurements.values())
-                assert label != "sans-bande" or not any(guided.values())
-                fixture["cases"].append({"case": label, "max_click_error_px": measurements,
-                                         "known_grid_qr_decoded": guided})
-            result["fixtures"].append(fixture)
-            print(name, len(payload), f"{width}×{height}", len(layouts), flush=True)
-    result["summary"] = summary(result["fixtures"])
+        for name, poster, steps in samples:
+            run_fixture(codec, result, name, poster, steps, encode_carrier, render_case, get_cases, formats,
+                        retry_bilinear=retry_bilinear)
+    result["summary"] = summary(result["fixtures"], formats)
     result["known_grid_summary"] = {
         family: sum(any(key.startswith(family + "-") and value
                         for key, value in case["known_grid_qr_decoded"].items())
                     for fixture in result["fixtures"] for case in fixture["cases"])
-        for family in FORMATS
+        for family in formats
     }
     result["paired_blind"] = paired_blind(result["fixtures"])
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -395,8 +374,52 @@ def main(output, resampler):
                      ensure_ascii=False, indent=2))
 
 
-def summary(results):
-    methods = ("ghostframe", "qr", "rmqr")
+def run_fixture(codec, result, name, poster, steps, encode_carrier, render_case, get_cases, formats, *, retry_bilinear):
+    w, h = poster.size
+    encoded = codec.call("render", width=w, height=h, steps=steps)
+    payload = binary(encoded["payload"])
+    height, width = encoded["rows"], encoded["stripWidth"]
+    band = Image.frombytes("L", (w, height), binary(encoded["band"]))
+    ours = encode_carrier(poster, band)
+    layouts = tuple((layout, encode_carrier(poster, layout.strip))
+                    for layout in qr_layouts(payload, w, h, height, width, formats))
+    assert {layout.key.split("-")[0] for layout, _ in layouts} == set(formats)
+    fixture = {"name": name, "payload_bytes": len(payload), "band": [width, height],
+               "jpeg_bytes": {"ghostframe": len(ours), **{layout.key: len(data) for layout, data in layouts}},
+               "cases": []}
+    for label, box, pct, quality, gray in get_cases(w, h + height, (w - width) // 2):
+        args = (box, pct, quality, gray)
+        received = render_case(ours, *args)
+        native = ghost_result(codec, received, payload, steps, box)
+        restored = native
+        if retry_bilinear and native is None:
+            restored = ghost_result(codec, received, payload, steps, box, interpolate=True)
+        measurements = {"ghostframe": restored}
+        guided = {}
+        for layout, image in layouts:
+            sample = render_case(image, *args)
+            measurements[layout.key] = qr_result(layout, sample, payload, steps, box)
+            reads = known_grid_qr(layout, sample, box)
+            if any(read != payload for read in reads):
+                raise AssertionError(f"{layout.key} read an unexpected payload from the known grid")
+            guided[layout.key] = bool(reads)
+        if label == "original92":
+            assert measurements["ghostframe"] is not None
+            for family in formats:
+                assert any(k.startswith(family + "-") and v is not None for k, v in measurements.items()), (name, family)
+                assert any(k.startswith(family + "-") and v for k, v in guided.items()), (name, family)
+        assert label != "sans-bande" or all(value is None for value in measurements.values())
+        assert label != "sans-bande" or not any(guided.values())
+        entry = {"case": label, "max_click_error_px": measurements, "known_grid_qr_decoded": guided}
+        if retry_bilinear:
+            entry["gfs2_nearest_only_error_px"] = native
+        fixture["cases"].append(entry)
+    result["fixtures"].append(fixture)
+    print(name, len(payload), f"{width}x{height}", len(layouts), flush=True)
+
+
+def summary(results, formats=FORMATS):
+    methods = ("ghostframe", *formats)
     comparison = {method: [] for method in methods}
     for fixture in results:
         best = {method: [] for method in methods}
