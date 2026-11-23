@@ -12,20 +12,19 @@
 | npm ou npx, paquet `@residual-labs/ghostframe-replay` | Servir Replay en local, générer son HTML ou intégrer le codec JavaScript | Node.js 22+ |
 | Python, paquet `project-ghostframe` | Créer, inspecter et restaurer des PNG/APNG en ligne de commande ou via `import ghostframe` | Python 3.10+ |
 
-Depuis un clone qui contient Replay, produire le fichier HTML et l’ouvrir dans le navigateur.
+Avec Node.js 22+, lancer Replay depuis un dossier extérieur au clone. Ouvrir l’adresse locale affichée et arrêter le serveur avec `Ctrl+C`. Le serveur écoute sur `127.0.0.1`.
+
+```sh
+npx --yes --package @residual-labs/ghostframe-replay ghostframe-replay
+```
+
+Utiliser `npm install @residual-labs/ghostframe-replay` pour ajouter le codec à un projet Node.js. Depuis ce projet, `npx ghostframe-replay build sortie.html` génère l’HTML autonome. Le fichier HTML est aussi disponible dans les [versions GitHub](https://github.com/zakariagharzouli/project-ghostframe/releases).
+
+Depuis le clone, `node web/replay/cli.cjs --help` affiche les options. On peut aussi générer l’HTML directement.
 
 ```sh
 node web/replay/build.cjs ghostframe-replay.html
 ```
-
-Pour exécuter Replay avec le paquet npm local, générer l’archive depuis le dépôt ou utiliser l’archive déjà construite. La commande affiche l’adresse à ouvrir et tourne jusqu’à `Ctrl+C`.
-
-```sh
-npm pack
-npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-replay
-```
-
-Le même paquet s’installe dans un projet avec `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz`. Depuis ce projet, `npx ghostframe-replay build sortie.html` génère l’HTML autonome. Depuis les sources, `node web/replay/cli.cjs --help` affiche les options. Le serveur est limité à `127.0.0.1`.
 
 Pour les outils APNG, installer `project-ghostframe` depuis PyPI, de préférence dans un environnement virtuel. Le [guide Python](docs/python-package.md) explique aussi l’installation depuis les sources.
 

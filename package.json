@@ -1,8 +1,14 @@
 {
   "name": "@residual-labs/ghostframe-replay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create and replay annotated JPEG screenshots locally in your browser",
   "license": "MIT",
+  "author": "Residual Labs",
+  "homepage": "https://residual-labs.fr/",
+  "bugs": {
+    "url": "https://github.com/zakariagharzouli/project-ghostframe/issues"
+  },
+  "keywords": ["jpeg", "annotations", "image-processing", "replay"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zakariagharzouli/project-ghostframe.git"

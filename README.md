@@ -12,20 +12,19 @@ Ghostframe is an open-source Residual Labs project about recovering useful motio
 | npm or npx package `@residual-labs/ghostframe-replay` | Serve Replay locally, build the HTML, or use the JavaScript codec | Node.js 22+ |
 | Python package `project-ghostframe` | Generate, inspect, and recover PNG/APNG from the terminal or `import ghostframe` | Python 3.10+ |
 
-From a checkout containing Replay, build a standalone page to open in your browser.
+To start Replay with Node.js 22+, run this from outside the source checkout. Open the local URL it prints. Press `Ctrl+C` to stop the server. It listens only on `127.0.0.1`.
+
+```sh
+npx --yes --package @residual-labs/ghostframe-replay ghostframe-replay
+```
+
+Use `npm install @residual-labs/ghostframe-replay` to add the codec to a Node.js project. Run `npx ghostframe-replay build output.html` from that project to produce the standalone page. You can also download the HTML from the [GitHub releases](https://github.com/zakariagharzouli/project-ghostframe/releases).
+
+From the source checkout, use `node web/replay/cli.cjs --help` or build the HTML directly.
 
 ```sh
 node web/replay/build.cjs ghostframe-replay.html
 ```
-
-To run the npm package, create the release tarball from the repository or use an already built archive. The command prints a URL to open. Press `Ctrl+C` to stop the server. It listens only on `127.0.0.1`.
-
-```sh
-npm pack
-npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-replay
-```
-
-Install the same archive with `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz` to use the codec from Node.js. Run `npx ghostframe-replay build output.html` from that project to produce the standalone page. To run the CLI directly from the source checkout, use `node web/replay/cli.cjs --help`.
 
 For PNG/APNG tools, install the Python package from PyPI. A virtual environment keeps the command and dependencies isolated. The [Python package guide](docs/python-package.md) also covers installing from source.
 
