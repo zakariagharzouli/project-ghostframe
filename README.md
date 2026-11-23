@@ -9,7 +9,7 @@ Ghostframe is an open-source Residual Labs project about recovering useful motio
 | Distribution | Use it for | Requirements |
 | --- | --- | --- |
 | Standalone HTML | Edit and replay a JPEG in the browser | A modern browser |
-| npm or npx package `ghostframe-replay` | Serve Replay locally, build the HTML, or use the JavaScript codec | Node.js 22+ |
+| npm or npx package `@residual-labs/ghostframe-replay` | Serve Replay locally, build the HTML, or use the JavaScript codec | Node.js 22+ |
 | Python package `project-ghostframe` | Generate, inspect, and recover PNG/APNG from the terminal or `import ghostframe` | Python 3.10+ |
 
 From a checkout containing Replay, build a standalone page to open in your browser.
@@ -22,10 +22,10 @@ To run the npm package, create the release tarball from the repository or use an
 
 ```sh
 npm pack
-npx --yes --package ./ghostframe-replay-0.1.0.tgz ghostframe-replay
+npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-replay
 ```
 
-Install the same archive with `npm install ./ghostframe-replay-0.1.0.tgz` to use the codec from Node.js. Run `npx ghostframe-replay build output.html` from that project to produce the standalone page. To run the CLI directly from the source checkout, use `node web/replay/cli.cjs --help`.
+Install the same archive with `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz` to use the codec from Node.js. Run `npx ghostframe-replay build output.html` from that project to produce the standalone page. To run the CLI directly from the source checkout, use `node web/replay/cli.cjs --help`.
 
 For PNG/APNG tools, install the Python package from the repository or its wheel. A virtual environment keeps the command and dependencies isolated. Both forms are documented in the [Python package guide](docs/python-package.md).
 
@@ -64,5 +64,7 @@ python lab.py --no-browser
 Run `python lab.py` for the original Chromium rendering measurements, or pass `--browser` with an executable path. The comparative Replay benchmark and holdout use the separate requirements and commands listed in their reports.
 
 For distribution builds, `npm pack` creates the npm archive. Use `python -m pip install build` in your build environment, then `python -m build` to generate the Python source distribution and wheel in `dist/`.
+
+The [release guide](docs/release.md#english) lists the registry setup and install commands for published packages.
 
 [MIT license](LICENSE).

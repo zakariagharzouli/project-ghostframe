@@ -1,11 +1,15 @@
 {
-  "name": "ghostframe-replay",
+  "name": "@residual-labs/ghostframe-replay",
   "version": "0.1.0",
   "description": "Create and replay annotated JPEG screenshots locally in your browser",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zakariagharzouli/project-ghostframe.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": { "node": ">=22" },
   "type": "commonjs",
@@ -15,6 +19,7 @@
   "files": [
     "README.fr.md",
     "docs/python-package.md",
+    "docs/release.md",
     "web/replay/README.md",
     "web/replay/README.en.md",
     "web/replay/app.js",

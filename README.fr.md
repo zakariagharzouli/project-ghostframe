@@ -9,7 +9,7 @@
 | Format | Utilisation | Prérequis |
 | --- | --- | --- |
 | HTML autonome | Ouvrir l’éditeur et rejouer les étapes | Un navigateur moderne |
-| npm ou npx, paquet `ghostframe-replay` | Servir Replay en local, générer son HTML ou intégrer le codec JavaScript | Node.js 22+ |
+| npm ou npx, paquet `@residual-labs/ghostframe-replay` | Servir Replay en local, générer son HTML ou intégrer le codec JavaScript | Node.js 22+ |
 | Python, paquet `project-ghostframe` | Créer, inspecter et restaurer des PNG/APNG en ligne de commande ou via `import ghostframe` | Python 3.10+ |
 
 Depuis un clone qui contient Replay, produire le fichier HTML et l’ouvrir dans le navigateur.
@@ -22,10 +22,10 @@ Pour exécuter Replay avec le paquet npm local, générer l’archive depuis le 
 
 ```sh
 npm pack
-npx --yes --package ./ghostframe-replay-0.1.0.tgz ghostframe-replay
+npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-replay
 ```
 
-Le même paquet s’installe dans un projet avec `npm install ./ghostframe-replay-0.1.0.tgz`. Depuis ce projet, `npx ghostframe-replay build sortie.html` génère l’HTML autonome. Depuis les sources, `node web/replay/cli.cjs --help` affiche les options. Le serveur est limité à `127.0.0.1`.
+Le même paquet s’installe dans un projet avec `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz`. Depuis ce projet, `npx ghostframe-replay build sortie.html` génère l’HTML autonome. Depuis les sources, `node web/replay/cli.cjs --help` affiche les options. Le serveur est limité à `127.0.0.1`.
 
 Pour les outils APNG, installer `project-ghostframe` depuis le dépôt ou depuis sa roue Python, de préférence dans un environnement virtuel. L’[aide Python](docs/python-package.md) donne les deux commandes.
 
@@ -75,6 +75,8 @@ python ghostframe.py from-atlas run/processed/atlas-raster.png run/inputs/atlas.
 `encode` utilise le mode `dual` par défaut. `--mode apng` écrit un APNG standard seul et `--mode atlas` écrit un PNG statique vertical accompagné de son manifeste JSON. `--plays 0` indique une boucle infinie.
 
 Pour produire les distributions, `npm pack` génère l’archive npm. Dans l’environnement de construction Python, installer `build` avec `python -m pip install build`, puis exécuter `python -m build` pour créer l’archive source et la roue dans `dist/`.
+
+Le [guide de publication](docs/release.md#français) donne les réglages des registres et les commandes d’installation après publication.
 
 ## Documentation et preuves
 
