@@ -4,20 +4,30 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "project-ghostframe"
-version = "0.1.0"
+version = "0.1.1"
 description = "PNG and APNG generation, inspection, and recovery tools from Residual Labs"
 readme = "docs/python-package.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
+authors = [{ name = "Residual Labs" }]
+keywords = ["png", "apng", "animation", "image-processing"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Graphics",
+]
 dependencies = ["Pillow>=10"]
 
 [project.scripts]
 ghostframe = "ghostframe:main"
 
 [project.urls]
-Homepage = "https://github.com/zakariagharzouli/project-ghostframe"
+Homepage = "https://residual-labs.fr/"
+Source = "https://github.com/zakariagharzouli/project-ghostframe"
+Documentation = "https://github.com/zakariagharzouli/project-ghostframe/blob/feature/ghostframe-replay/docs/python-package.md"
 Issues = "https://github.com/zakariagharzouli/project-ghostframe/issues"
+"Residual Labs on GitHub" = "https://github.com/ResidualLabs"
 
 [tool.setuptools]
 py-modules = ["ghostframe"]

@@ -27,14 +27,20 @@ npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-repla
 
 Install the same archive with `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz` to use the codec from Node.js. Run `npx ghostframe-replay build output.html` from that project to produce the standalone page. To run the CLI directly from the source checkout, use `node web/replay/cli.cjs --help`.
 
-For PNG/APNG tools, install the Python package from the repository or its wheel. A virtual environment keeps the command and dependencies isolated. Both forms are documented in the [Python package guide](docs/python-package.md).
+For PNG/APNG tools, install the Python package from PyPI. A virtual environment keeps the command and dependencies isolated. The [Python package guide](docs/python-package.md) also covers installing from source.
 
 ```sh
-python -m pip install .
+python -m pip install project-ghostframe
+python -m ghostframe --help
+```
+
+In the source checkout, inspect a supplied example.
+
+```sh
 python -m ghostframe inspect evidence/inputs/apng-a.png
 ```
 
-The commands above use source or local archives. Replay's browser interface is in French. The Python package contains the APNG command and `ghostframe` module. The repository also contains the research harnesses and evidence.
+Replay's browser interface is in French. The Python package contains the APNG command and `ghostframe` module. The repository also contains the research harnesses and evidence.
 
 ## What Replay does
 

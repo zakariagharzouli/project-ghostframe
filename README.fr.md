@@ -27,14 +27,20 @@ npx --yes --package ./residual-labs-ghostframe-replay-0.1.0.tgz ghostframe-repla
 
 Le même paquet s’installe dans un projet avec `npm install ./residual-labs-ghostframe-replay-0.1.0.tgz`. Depuis ce projet, `npx ghostframe-replay build sortie.html` génère l’HTML autonome. Depuis les sources, `node web/replay/cli.cjs --help` affiche les options. Le serveur est limité à `127.0.0.1`.
 
-Pour les outils APNG, installer `project-ghostframe` depuis le dépôt ou depuis sa roue Python, de préférence dans un environnement virtuel. L’[aide Python](docs/python-package.md) donne les deux commandes.
+Pour les outils APNG, installer `project-ghostframe` depuis PyPI, de préférence dans un environnement virtuel. Le [guide Python](docs/python-package.md) explique aussi l’installation depuis les sources.
 
 ```sh
-python -m pip install .
+python -m pip install project-ghostframe
+python -m ghostframe --help
+```
+
+Depuis le clone du dépôt, inspecter un exemple fourni.
+
+```sh
 python -m ghostframe inspect evidence/inputs/apng-a.png
 ```
 
-Ces exemples utilisent les sources et les archives de distribution. L’éditeur Replay a une interface en français. Le paquet Python contient la commande APNG et le module `ghostframe`. Les scripts de recherche et les jeux de tests restent dans le dépôt.
+L’éditeur Replay a une interface en français. Le paquet Python contient la commande APNG et le module `ghostframe`. Les scripts de recherche et les jeux de tests restent dans le dépôt.
 
 ## Recherche sur les formats d’image
 
