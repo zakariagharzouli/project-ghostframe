@@ -1,5 +1,7 @@
 # Project Ghostframe
 
+**[Ghostframe Replay](web/replay/README.md)** transforme une capture d’écran annotée en JPEG rejouable. L’éditeur et le lecteur fonctionnent dans le navigateur, sans envoi de fichier. Le rapport décrit les essais de recompression et les limites du prototype.
+
 Prototype de Residual Labs pour mesurer ce qu’une chaîne de traitement PNG conserve d’une animation. Le projet fournit deux chemins de récupération et vérifie leur sortie dans le navigateur à partir de captures du rendu.
 
 La [phase 2](docs/phase2.md) ajoute des rectangles APNG, un transcodage WebP animé, une capsule raster à parité et un banc comparatif Pillow/OpenCV. Voir le [rapport Phase 2](docs/phase2-results.md) et la [matrice mesurée](evidence/phase2/matrice.md).
