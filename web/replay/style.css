@@ -12,10 +12,10 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--base); color: var(--ink); }
 [hidden] { display: none !important; }
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 button { cursor: pointer; color: inherit; }
 button:disabled { opacity: .48; cursor: default; }
-button:focus-visible, input:focus-visible, canvas:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, canvas:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 .top, main { width: min(100% - 3rem, 76rem); margin-inline: auto; }
 .top { min-height: 4.4rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--edge); }
 .brand, .local { display: flex; gap: .65rem; align-items: center; font-size: .9rem; }
@@ -45,6 +45,7 @@ h1 span { color: var(--orange); }
 .primary { background: var(--orange); border-color: transparent; color: #20150f; }
 .primary:hover:not(:disabled) { background: #ffa47b; }
 .viewport { min-height: 16rem; padding: clamp(.9rem, 2.8vw, 1.8rem); background: #141417; display: grid; place-items: center; border-block: 1px solid var(--edge); }
+.viewport[data-dropping="true"] { box-shadow: inset 0 0 0 2px var(--orange); }
 .stage { position: relative; min-width: 0; max-width: 100%; }
 canvas { display: block; width: auto; height: auto; max-width: 100%; max-height: min(58vh, 39rem); border-radius: .4rem; }
 canvas[data-editable="true"] { cursor: crosshair; }
@@ -69,9 +70,10 @@ canvas[data-editable="true"] { cursor: crosshair; }
 .step-select[aria-current="step"] .step-number { color: var(--orange); border-color: var(--orange); }
 .step-title { font-size: .9rem; overflow-wrap: anywhere; }
 .step-time { color: var(--quiet); font-size: .83rem; white-space: nowrap; }
-.edit-step, .export-area { padding: 1rem; border-top: 1px solid var(--edge); display: grid; gap: .5rem; }
+.edit-step, .export-area, .copy-area { padding: 1rem; border-top: 1px solid var(--edge); display: grid; gap: .5rem; }
 .edit-step label { color: var(--quiet); font-size: .85rem; }
-.edit-step input { background: #151518; border: 1px solid var(--edge); color: var(--ink); border-radius: .4rem; min-height: 2.35rem; padding: .4rem .55rem; width: 100%; }
+.edit-step input, .copy-area textarea { background: #151518; border: 1px solid var(--edge); color: var(--ink); border-radius: .4rem; min-height: 2.35rem; padding: .4rem .55rem; width: 100%; }
+.copy-area textarea { resize: vertical; font-size: .9rem; }
 .duration-control { width: 7rem; display: flex; align-items: center; gap: .45rem; color: var(--quiet); }
 .remove { justify-self: start; background: transparent; border-color: transparent; padding-inline: 0; color: var(--quiet); }
 .capacity, .status { color: var(--quiet); font-size: .88rem; }

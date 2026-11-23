@@ -43,7 +43,7 @@
             <span id="target" class="target" hidden aria-hidden="true"></span>
           </div>
           <div id="empty" class="empty" hidden>
-            <p>Ouvrez une image exportée depuis Ghostframe.</p>
+            <p>Ouvrez ou déposez un JPEG exporté depuis Ghostframe.</p>
             <button type="button" id="empty-open" class="primary">Ouvrir un JPEG</button>
           </div>
         </div>
@@ -75,6 +75,10 @@
         <div id="export-area" class="export-area">
           <button id="export" type="button" class="primary">Exporter le JPEG</button>
           <div id="capacity" class="capacity"></div>
+        </div>
+        <div id="copy-area" class="copy-area" hidden>
+          <button id="copy-steps" type="button" class="quiet">Copier les étapes</button>
+          <textarea id="steps-text" aria-label="Étapes en texte brut" readonly rows="4" hidden></textarea>
         </div>
       </section>
     </div>

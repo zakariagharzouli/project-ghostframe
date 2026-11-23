@@ -23,9 +23,9 @@ function raster(w, h, background = 255) {
   };
 }
 
-function capture() {
-  const image = raster(width, height + Ghostframe.BAND_HEIGHT);
-  Ghostframe.paintBand(image, width, height, steps);
+function capture(sequence = steps) {
+  const image = raster(width, height + Ghostframe.bandHeight(sequence));
+  Ghostframe.paintBand(image, width, height, sequence);
   return image;
 }
 
@@ -71,6 +71,42 @@ test('reads the original and the half-sized raster', () => {
   assert.deepEqual(small.crop, { x: 0, y: 0, right: width / 2, bottom: height / 2 });
 });
 
+test('uses 40 to 88 pixels based on the payload, with 56 for the example', () => {
+  const minimal = [{ ...steps[0], note: '' }];
+  const full = steps.map((step, index) => ({ ...step, note: 'x'.repeat(index === 2 ? 28 : 96) }));
+  assert.equal(Ghostframe.bandHeight(minimal), 40);
+  assert.equal(Ghostframe.bandHeight(steps), 56);
+  assert.equal(Ghostframe.bandHeight(full), 88);
+  assert.deepEqual(Ghostframe.scan(capture(minimal)).steps, minimal);
+  assert.deepEqual(Ghostframe.scan(capture(full)).steps, full);
+});
+
+test('still reads the original fixed-band GFS1 packets', () => {
+  // Sampled from the real encoder at a751958, one base64 string per tile.
+  const legacy = [
+    'R0ZTMbNx3V4AVACdWLL0BGACigMBtQEWChVDaG9pc2lyIGNvbW1hbmRlcy5jc3YBawFnCRFMYW5jZXIgbOKAmWltcG9ydAFWAb0QF0zigJllcnJldXIgNDIgYXBwYXJh',
+    'R0ZTMbNx3V4AVAGzGk2Rw650AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+    'R0ZTMbNx3V4AVAKgwOieAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+    'R0ZTMbNx3V4AVAOOghf7x852igMBtQEWChVDaG9pc2lyIGNvbW1hbmRlcy5jc3YBawFnCRFMYW5jZXIgbOKAmWltcG9ydAFWAb0QF0zigJllcnJldXIgNDIgYXBwYXJh',
+  ];
+  const image = raster(width, height + 88);
+  image.fillStyle = '#101010';
+  for (const [index, value] of legacy.entries()) {
+    const bytes = Buffer.from(value, 'base64');
+    const x0 = 96 + 232 * index;
+    image.fillRect(x0 + 4, height + 4, 8, 80);
+    image.fillRect(x0 + 220, height + 4, 8, 80);
+    for (let bit = 0; bit < 768; bit += 1) {
+      if (bytes[bit >>> 3] & (128 >>> (bit & 7))) {
+        image.fillRect(x0 + (5 + bit % 48) * 4, height + (3 + Math.floor(bit / 48)) * 4, 4, 4);
+      }
+    }
+  }
+  const decoded = Ghostframe.scan(transform(image, { left: 328, top: 32, scale: .5 }));
+  assert.deepEqual(decoded.steps, steps);
+  assert.equal(decoded.recoveredTile, 0);
+});
+
 test('uses parity for a missing data tile and preserves positions after crop and scale', () => {
   const image = transform(capture(), { left: 328, top: 32, scale: .5 });
   const restored = Ghostframe.scan(image);
@@ -79,6 +115,9 @@ test('uses parity for a missing data tile and preserves positions after crop and
   assert.equal(restored.left, -164);
   assert.equal(restored.top, -16);
   assert.deepEqual(restored.crop, { x: 0, y: 0, right: 396, bottom: 309 });
+  const top = 60;
+  const window = { data: image.data.subarray(top * 4 * image.width), width: image.width, height: image.height - top };
+  assert.deepEqual(Ghostframe.scan(window, top), restored);
 });
 
 test('recovers each single missing tile and refuses two data losses', () => {
@@ -87,14 +126,14 @@ test('recovers each single missing tile and refuses two data losses', () => {
   for (let index = 0; index < 4; index += 1) {
     const image = capture();
     image.fillStyle = '#fff';
-    image.fillRect(origin + index * stripe, height, stripe, Ghostframe.BAND_HEIGHT);
+    image.fillRect(origin + index * stripe, height, stripe, Ghostframe.bandHeight(steps));
     const restored = Ghostframe.scan(image);
     assert.deepEqual(restored.steps, steps);
     assert.equal(restored.recoveredTile, index === 3 ? null : index);
   }
   const image = capture();
   image.fillStyle = '#fff';
-  image.fillRect(origin, height, stripe * 2, Ghostframe.BAND_HEIGHT);
+  image.fillRect(origin, height, stripe * 2, Ghostframe.bandHeight(steps));
   assert.equal(Ghostframe.scan(image), null);
 });
 

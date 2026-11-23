@@ -21,6 +21,7 @@ async (page) => {
     ['example', '3 étapes récupérées.', 1120, 650],
     ['jpeg65', '3 étapes récupérées.', 1120, 650],
     ['resize50', '3 étapes récupérées.', 560, 325],
+    ['resize63', '3 étapes récupérées.', 706, 410],
     ['crop50', '3 étapes récupérées. Une tuile manquante a été restaurée.', 396, 309],
     ['gray-crop50', '3 étapes récupérées. Une tuile manquante a été restaurée.', 396, 309],
   ]) {
@@ -36,8 +37,9 @@ async (page) => {
       return { width, height, x: (parseFloat(left) / 100) * width, y: (parseFloat(top) / 100) * height };
     });
     if (marker.width !== width || marker.height !== height) throw new Error(`Wrong geometry for ${fixture}`);
-    const nominalX = (437.5 - (fixture.includes('crop') ? 328 : 0)) * (fixture.includes('50') ? .5 : 1);
-    const nominalY = (278.5 - (fixture.includes('crop') ? 32 : 0)) * (fixture.includes('50') ? .5 : 1);
+    const scale = fixture.includes('50') ? .5 : fixture.includes('63') ? .63 : 1;
+    const nominalX = (437.5 - (fixture.includes('crop') ? 328 : 0)) * scale;
+    const nominalY = (278.5 - (fixture.includes('crop') ? 32 : 0)) * scale;
     if (Math.abs(marker.x - nominalX) > 1 || Math.abs(marker.y - nominalY) > 1) {
       throw new Error(`Wrong replay position for ${fixture}`);
     }

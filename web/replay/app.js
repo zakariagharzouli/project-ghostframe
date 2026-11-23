@@ -2,9 +2,9 @@
 
 const byId = (id) => document.getElementById(id);
 const ui = Object.fromEntries([
-  'editor-tab', 'reader-tab', 'file-name', 'file', 'example', 'choose', 'stage', 'screen', 'target', 'empty',
+  'editor-tab', 'reader-tab', 'file-name', 'file', 'example', 'choose', 'viewport', 'stage', 'screen', 'target', 'empty',
   'empty-open', 'prev', 'play', 'next', 'capture-help', 'play-caption', 'step-count', 'no-steps', 'step-list',
-  'edit-step', 'note', 'duration', 'remove', 'export-area', 'export', 'capacity', 'status',
+  'edit-step', 'note', 'duration', 'remove', 'export-area', 'export', 'capacity', 'copy-area', 'copy-steps', 'steps-text', 'status',
 ].map((id) => [id, byId(id)]));
 const editor = { image: null, steps: [], selected: -1, name: '' };
 const reader = { image: null, steps: [], selected: -1, name: '', geometry: null };
@@ -96,6 +96,7 @@ function changeMode(mode) {
   stopPlaying();
   current = mode;
   keyboardPoint = null;
+  ui['steps-text'].hidden = true;
   status();
   render();
 }
@@ -168,7 +169,9 @@ function showCapacity() {
   const used = Ghostframe.metrics(editor.steps);
   const notesFit = editor.steps.every((step) => noteEncoder.encode(step.note).length <= Ghostframe.MAX_NOTE_BYTES);
   const within = used <= Ghostframe.CAPACITY && notesFit;
-  ui.capacity.textContent = within ? `${used} / ${Ghostframe.CAPACITY} octets pour les étapes` : 'Raccourcissez les annotations pour exporter.';
+  const remaining = Ghostframe.CAPACITY - used;
+  const size = Ghostframe.bandHeight(editor.steps);
+  ui.capacity.textContent = within ? `${remaining} octets disponibles · bande de ${size} px` : 'Raccourcissez les annotations pour exporter.';
   ui.capacity.dataset.over = String(!within);
   ui.export.disabled = !editor.steps.length || !within || exporting;
 }
@@ -186,9 +189,11 @@ function render({ fields = true } = {}) {
   ui.screen.setAttribute('aria-label', editing ? 'Capture à annoter' : 'Capture du signalement');
   ui.screen.tabIndex = editing ? 0 : -1;
   ui['capture-help'].textContent = editing
-    ? 'Cliquez pour ajouter un repère. Au clavier, utilisez les flèches puis Entrée.'
+    ? 'Collez ou déposez une image. Pour ajouter un repère, cliquez ou utilisez les flèches puis Entrée.'
     : reader.image ? 'La séquence est lue depuis l’image.' : '';
   ui['export-area'].hidden = !editing;
+  ui['copy-area'].hidden = !current.steps.length;
+  if (!ui['steps-text'].hidden) ui['steps-text'].value = formatSteps(current.steps);
   ui['edit-step'].hidden = !editing || !step || playing;
   ui.play.textContent = playing ? 'Pause' : pausedFor === null ? 'Lire la séquence' : 'Reprendre';
   ui.play.disabled = !current.steps.length;
@@ -257,7 +262,7 @@ function normalize(bitmap) {
   return image;
 }
 
-function decodeBitmap(bitmap) {
+function inspectBitmap(bitmap) {
   if (bitmap.width * bitmap.height > 8_000_000 || Math.max(bitmap.width, bitmap.height) > 4000) {
     throw new Error('L’image est trop grande pour le lecteur.');
   }
@@ -266,8 +271,14 @@ function decodeBitmap(bitmap) {
   context.fillStyle = '#fff';
   context.fillRect(0, 0, bitmap.width, bitmap.height);
   context.drawImage(bitmap, 0, 0);
-  const geometry = Ghostframe.scan(context.getImageData(0, 0, bitmap.width, bitmap.height));
+  const top = Math.max(0, bitmap.height - Ghostframe.SCAN_HEIGHT);
+  const geometry = Ghostframe.scan(context.getImageData(0, top, bitmap.width, bitmap.height - top), top);
   if (!geometry) throw new Error('Aucune séquence Ghostframe récupérable dans cette image.');
+  return { encoded, geometry };
+}
+
+function decodeBitmap(bitmap) {
+  const { encoded, geometry } = inspectBitmap(bitmap);
   const { x, y, right, bottom } = geometry.crop;
   const image = createCanvas(right - x, bottom - y);
   image.getContext('2d').drawImage(encoded, x, y, image.width, image.height, 0, 0, image.width, image.height);
@@ -293,6 +304,7 @@ async function openFile(file, target) {
     if (target !== current) return;
     stopPlaying();
     keyboardPoint = null;
+    ui['steps-text'].hidden = true;
     render();
     if (target === reader) {
       const count = reader.steps.length;
@@ -312,14 +324,24 @@ async function exportImage() {
   if (exporting) return;
   exporting = true;
   showCapacity();
+  status('Export et vérification du JPEG…');
   try {
     const { image, steps, name } = editor;
-    const canvas = createCanvas(image.width, image.height + Ghostframe.BAND_HEIGHT);
+    const canvas = createCanvas(image.width, image.height + Ghostframe.bandHeight(steps));
     const context = canvas.getContext('2d', { alpha: false });
     context.drawImage(image, 0, 0);
-    Ghostframe.paintBand(context, image.width, image.height, steps);
+    const expected = Ghostframe.paintBand(context, image.width, image.height, steps);
     const blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/jpeg', .92));
     if (!blob || blob.type !== 'image/jpeg') throw new Error('Le navigateur n’a pas pu générer le JPEG.');
+    const decoded = await createImageBitmap(blob);
+    try {
+      const { geometry } = inspectBitmap(decoded);
+      const actual = Ghostframe.serialize(geometry.width, geometry.height, geometry.steps);
+      if (geometry.validTiles !== 4 || actual.length !== expected.length
+        || !actual.every((byte, index) => byte === expected[index])) throw new Error('Vérification des étapes impossible.');
+    } finally {
+      decoded.close();
+    }
     const stem = name.replace(/\.[^.]+$/, '').replace(/[^\p{L}\p{N}-]+/gu, '-').replace(/^-|-$/g, '');
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -327,12 +349,38 @@ async function exportImage() {
     link.href = href;
     link.click();
     setTimeout(() => URL.revokeObjectURL(href), 30_000);
-    if (current === editor) status('JPEG exporté. Ouvrez-le dans Rejouer pour retrouver ses étapes.');
+    if (current === editor) status('JPEG vérifié et exporté. Ouvrez-le dans Rejouer pour retrouver ses étapes.');
   } catch (error) {
     if (current === editor) status(error.message, true);
   } finally {
     exporting = false;
     showCapacity();
+  }
+}
+
+function formatSteps(steps) {
+  return steps.map((step, index) => {
+    const label = step.note.trim() || `Cliquer au repère (${step.x}, ${step.y})`;
+    return `${index + 1}. ${label}`;
+  }).join('\n');
+}
+
+async function copySteps() {
+  const mode = current;
+  const text = formatSteps(current.steps);
+  try {
+    await navigator.clipboard.writeText(text);
+    if (current !== mode) return;
+    ui['steps-text'].hidden = true;
+    status('Étapes copiées. Collez-les dans le ticket.');
+  } catch {
+    if (current !== mode) return;
+    const field = ui['steps-text'];
+    field.value = text;
+    field.hidden = false;
+    field.focus();
+    field.select();
+    status('Le texte est sélectionné. Copiez-le pour le coller dans le ticket.');
   }
 }
 
@@ -345,6 +393,31 @@ ui.file.addEventListener('change', () => {
   const [file] = ui.file.files;
   ui.file.value = '';
   if (file) void openFile(file, current);
+});
+ui.viewport.addEventListener('dragover', (event) => {
+  if (!event.dataTransfer.types.includes('Files')) return;
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'copy';
+  ui.viewport.dataset.dropping = 'true';
+});
+ui.viewport.addEventListener('dragleave', (event) => {
+  if (!ui.viewport.contains(event.relatedTarget)) delete ui.viewport.dataset.dropping;
+});
+ui.viewport.addEventListener('drop', (event) => {
+  delete ui.viewport.dataset.dropping;
+  const [file] = event.dataTransfer.files;
+  if (!file) return;
+  event.preventDefault();
+  void openFile(file, current);
+});
+document.addEventListener('paste', (event) => {
+  if (event.target instanceof Element && event.target.closest('input, textarea, [contenteditable="true"]')) return;
+  const item = Array.from(event.clipboardData?.items || []).find(({ kind, type }) =>
+    kind === 'file' && type.startsWith('image/'));
+  const file = item?.getAsFile();
+  if (!file) return;
+  event.preventDefault();
+  void openFile(file, current);
 });
 
 ui.screen.addEventListener('click', (event) => {
@@ -418,5 +491,6 @@ ui.remove.addEventListener('click', () => {
   (editor.steps.length ? ui.note : ui.screen).focus();
 });
 ui.export.addEventListener('click', () => void exportImage());
+ui['copy-steps'].addEventListener('click', () => void copySteps());
 
 loadExample();
