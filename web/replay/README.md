@@ -1,5 +1,7 @@
 # Ghostframe Replay
 
+Français · [English](README.en.md) · [Installation](../../README.fr.md#installation)
+
 Créez un JPEG qui montre une capture d’écran et transporte les étapes pour reproduire un bug. L’éditeur et le lecteur fonctionnent dans le navigateur. Les images et leurs annotations restent sur l’appareil.
 
 ## Essayer

@@ -1,0 +1,29 @@
+{
+  "name": "ghostframe-replay",
+  "version": "0.1.0",
+  "description": "Create and replay annotated JPEG screenshots locally in your browser",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakariagharzouli/project-ghostframe.git"
+  },
+  "engines": { "node": ">=22" },
+  "type": "commonjs",
+  "exports": "./web/replay/codec.js",
+  "bin": { "ghostframe-replay": "web/replay/cli.cjs" },
+  "scripts": { "test": "node --test web/replay/codec.test.cjs web/replay/cli.test.cjs" },
+  "files": [
+    "README.fr.md",
+    "docs/python-package.md",
+    "web/replay/README.md",
+    "web/replay/README.en.md",
+    "web/replay/app.js",
+    "web/replay/benchmark.md",
+    "web/replay/build.cjs",
+    "web/replay/cli.cjs",
+    "web/replay/codec.js",
+    "web/replay/holdout.md",
+    "web/replay/index.html",
+    "web/replay/style.css"
+  ]
+}
