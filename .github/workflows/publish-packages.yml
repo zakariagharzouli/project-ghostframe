@@ -12,6 +12,8 @@ on:
       - 'web/replay/**'
       - 'docs/python-package.md'
   push:
+    branches:
+      - 'release/npm-v0.1.1'
     tags:
       - 'npm-v*'
       - 'pypi-v*'
@@ -21,7 +23,7 @@ permissions:
 
 jobs:
   npm-build:
-    if: github.event_name == 'pull_request' || startsWith(github.ref, 'refs/tags/npm-v')
+    if: github.event_name == 'pull_request' || startsWith(github.ref, 'refs/tags/npm-v') || github.ref == 'refs/heads/release/npm-v0.1.1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -31,11 +33,11 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Check npm tag version
-        if: github.ref_type == 'tag'
+      - name: Check npm release version
+        if: github.event_name == 'push'
         run: |
           version=$(node -p "require('./package.json').version")
-          test "$GITHUB_REF_NAME" = "npm-v$version"
+          test "${GITHUB_REF_NAME#release/}" = "npm-v$version"
       - run: npm test
       - run: mkdir dist && npm pack --pack-destination dist
       - uses: actions/upload-artifact@v7
@@ -45,7 +47,7 @@ jobs:
           if-no-files-found: error
 
   npm-stage:
-    if: startsWith(github.ref, 'refs/tags/npm-v')
+    if: startsWith(github.ref, 'refs/tags/npm-v') || github.ref == 'refs/heads/release/npm-v0.1.1'
     needs: npm-build
     runs-on: ubuntu-latest
     environment: npm

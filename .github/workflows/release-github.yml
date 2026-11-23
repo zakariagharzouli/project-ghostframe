@@ -1,0 +1,62 @@
+name: Publish Ghostframe GitHub Release
+
+on:
+  push:
+    branches:
+      - 'release/npm-v0.1.1'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: 'f25a018e8ba121e18e19667c63d723e7599844be'
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: npm test
+      - run: node web/replay/build.cjs ghostframe-replay.html
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ghostframe-standalone
+          path: ghostframe-replay.html
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: ghostframe-standalone
+      - name: Publish the release and standalone app
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_COMMIT: 'f25a018e8ba121e18e19667c63d723e7599844be'
+        run: |
+          cat > release-notes.md <<'NOTES'
+          ## English
+          
+          Ghostframe Replay turns an annotated screenshot into a JPEG whose steps can be replayed locally in a browser. Download `ghostframe-replay.html` to use the standalone app, or install the [npm package](https://www.npmjs.com/package/@residual-labs/ghostframe-replay).
+          
+          The [Python package](https://pypi.org/project/project-ghostframe/) provides PNG and APNG generation, inspection, and recovery.
+          
+          ## Français
+          
+          Ghostframe Replay permet d’annoter une capture et de rejouer les étapes d’un JPEG dans le navigateur. Télécharger `ghostframe-replay.html` pour ouvrir l’application autonome, ou utiliser le [paquet npm](https://www.npmjs.com/package/@residual-labs/ghostframe-replay).
+          
+          Le [paquet Python](https://pypi.org/project/project-ghostframe/) permet de générer, d’inspecter et de restaurer des PNG et APNG.
+          NOTES
+          gh release create v0.1.1 ghostframe-replay.html \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$RELEASE_COMMIT" \
+            --title "Ghostframe 0.1.1" \
+            --notes-file release-notes.md
