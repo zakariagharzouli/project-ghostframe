@@ -2,7 +2,11 @@
 
 English · [Français](README.fr.md) · [Replay technical guide](web/replay/README.en.md)
 
+<img src="docs/media/ghostframe-logo.svg" width="640" alt="Ghostframe, by Residual Labs">
+
 Ghostframe is an open-source Residual Labs project about recovering useful motion and annotations after image processing. **Ghostframe Replay** turns an annotated screenshot into a JPEG that can replay the steps in a browser. The PNG/APNG tools are a separate part of the project for generating, inspecting, and recovering animations.
+
+[Visual walkthrough and logos](docs/media/README.md) · [GFS2 preprint and reproducibility files](https://zenodo.org/records/24490921)
 
 ## Install and try
 

@@ -2,7 +2,11 @@
 
 [English](README.md) · Français · [Guide Replay](web/replay/README.md)
 
+<img src="docs/media/ghostframe-logo-fr.svg" width="640" alt="Ghostframe, par Residual Labs">
+
 **[Ghostframe Replay](web/replay/README.md)** transforme une capture d’écran annotée en JPEG rejouable. L’éditeur et le lecteur fonctionnent dans le navigateur, sans envoi de fichier. Le rapport décrit les essais de recompression et les limites du prototype.
+
+[Présentation illustrée et logos](docs/media/README.md) · [Prépublication GFS2 et fichiers de reproduction](https://zenodo.org/records/24490921)
 
 ## Installation
 
