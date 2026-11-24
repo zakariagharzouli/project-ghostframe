@@ -2,11 +2,11 @@
 
 English · [Français](README.fr.md) · [Replay technical guide](web/replay/README.en.md)
 
-<img src="docs/media/ghostframe-logo.svg" width="640" alt="Ghostframe, by Residual Labs">
+<img src="https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/ghostframe-logo.svg" width="640" alt="Ghostframe, by Residual Labs">
 
 Ghostframe is an open-source Residual Labs project about recovering useful motion and annotations after image processing. **Ghostframe Replay** turns an annotated screenshot into a JPEG that can replay the steps in a browser. The PNG/APNG tools are a separate part of the project for generating, inspecting, and recovering animations.
 
-[Visual walkthrough and logos](docs/media/README.md) · [GFS2 preprint and reproducibility files](https://zenodo.org/records/24490921)
+[Visual walkthrough and logos](https://github.com/zakariagharzouli/project-ghostframe/tree/main/docs/media) · [GFS2 preprint and reproducibility files](https://zenodo.org/records/24490921)
 
 ## Install and try
 
@@ -50,6 +50,18 @@ Replay's browser interface is in French. The Python package contains the APNG co
 Import, paste, or drop a screenshot, then place ordered markers with optional notes and durations. Export a JPEG and open it in **Rejouer** to play the steps. Replay stores the sequence in a visible grayscale strip. The editor and reader process images inside the browser.
 
 The [English guide](web/replay/README.en.md) documents the format, reproduction commands, and measured limits. The [French guide](web/replay/README.md) includes the complete reproduction instructions.
+
+## Ghostframe Replay in pictures
+
+The ten illustrations are in French. The English alternative text identifies each step and experiment. The ScreenSpot-Pro chart shows an experimental two-pass reader evaluated under the preprint's local protocol. The distributed app uses the ordinary reader.
+
+| Illustration | Illustration |
+| --- | --- |
+| ![Ghostframe Replay stores steps in a screenshot](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/01-presentation.png) | ![Flattening preserves a single poster frame](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/02-probleme.png) |
+| ![Add steps, export a JPEG and replay](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/03-workflow.png) | ![Four GFS2 tiles stored in JPEG pixels](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/04-anatomie-jpeg.png) |
+| ![Three data shards and one XOR parity tile](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/05-parite.png) | ![Local scaling and cropping tests](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/06-transformations.png) |
+| ![Fictional support ticket with three steps](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/07-ticket-support.png) | ![Local equal-area comparison with fragmented QR codes](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/08-benchmark.png) |
+| ![ScreenSpot-Pro results for the experimental two-pass reader](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/09-validation.png) | ![Getting started with Node.js and npx](https://raw.githubusercontent.com/zakariagharzouli/project-ghostframe/9725e8a5f78f815cd5b161af6c98a6bf3887ff23/docs/media/10-demarrage.png) |
 
 ## Research and evidence
 
