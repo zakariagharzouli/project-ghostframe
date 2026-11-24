@@ -1,6 +1,6 @@
 {
   "name": "@residual-labs/ghostframe-replay",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create and replay annotated JPEG screenshots locally in your browser",
   "license": "MIT",
   "author": "Residual Labs",
